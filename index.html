@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Inserisci il tuo nome] - Portfolio Professionale</title>
+    <!-- Font moderni: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fogli di stile -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGAZIONE -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- NOME (Logo) -->
+            <a href="#" class="logo">[Inserisci il tuo nome]</a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#chi-sono" class="nav-link">Chi Sono</a></li>
+                    <li><a href="#competenze" class="nav-link">Competenze</a></li>
+                    <li><a href="#esperienza" class="nav-link">Esperienza</a></li>
+                    <li><a href="#formazione" class="nav-link">Formazione</a></li>
+                    <li><a href="#contatti" class="nav-link btn-contact">Contattami</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Menu Hamburger per Mobile -->
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Intro) -->
+    <section class="hero" id="home">
+        <div class="container hero-content fade-in">
+            <h1 class="hero-title">Ciao, sono <span class="highlight">[Inserisci il tuo nome]</span></h1>
+            <h2 class="hero-subtitle">[Inserisci il tuo Ruolo/Qualifica Professionale, es. Sviluppatore Web | UX/UI Designer]</h2>
+            <p class="hero-text">[Inserisci una brevissima frase d'impatto o il tuo obiettivo professionale. Es: Creo esperienze digitali intuitive e performanti con particolare attenzione ai dettagli.]</p>
+            <div class="hero-cta">
+                <a href="#contatti" class="btn btn-primary">Lavoriamo Insieme</a>
+                <a href="#esperienza" class="btn btn-secondary">Vedi Esperienze</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section class="section bg-light" id="chi-sono">
+        <div class="container fade-in">
+            <h2 class="section-title">Chi Sono</h2>
+            <div class="about-grid">
+                <!-- Se hai una foto, puoi inserirla qui. Altrimenti puoi lasciare questo o rimuoverlo -->
+                <div class="about-image-placeholder">
+                    <span>[Inserisci la tua foto qui - opzionale]</span>
+                </div>
+                <div class="about-text">
+                    <!-- INSERISCI LA TUA DESCRIZIONE PERSONALE -->
+                    <p>[Inserisci la tua descrizione personale. Parla brevemente di te, della tua passione per il tuo lavoro, dei tuoi valori e di cosa ti distingue. Mantieni un tono professionale ma autentico.]</p>
+                    <p>[Puoi aggiungere un secondo paragrafo per dettagliare meglio i tuoi punti di forza, il tuo approccio lavorativo o cosa stai cercando attualmente per la tua carriera.]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPETENZE -->
+    <section class="section" id="competenze">
+        <div class="container fade-in">
+            <h2 class="section-title">Competenze</h2>
+            <p class="section-subtitle">[Inserisci una breve introduzione sulle tue abilità principali e strumenti di cui hai padronanza]</p>
+            
+            <div class="skills-container">
+                <!-- Categoria Competenze 1 -->
+                <div class="skill-category card hover-up">
+                    <h3>[Categoria, es. Competenze Tecniche]</h3>
+                    <ul class="skill-list">
+                        <!-- INSERISCI LE TUE COMPETENZE PRINCIPALI -->
+                        <li>[Competenza 1]</li>
+                        <li>[Competenza 2]</li>
+                        <li>[Competenza 3]</li>
+                        <li>[Competenza 4]</li>
+                    </ul>
+                </div>
+
+                <!-- Categoria Competenze 2 -->
+                <div class="skill-category card hover-up">
+                    <h3>[Categoria, es. Strumenti & Software]</h3>
+                    <ul class="skill-list">
+                        <!-- INSERISCI LE TUE COMPETENZE PRINCIPALI -->
+                        <li>[Competenza 1]</li>
+                        <li>[Competenza 2]</li>
+                        <li>[Competenza 3]</li>
+                        <li>[Competenza 4]</li>
+                    </ul>
+                </div>
+                
+                <!-- Categoria Competenze 3 -->
+                <div class="skill-category card hover-up">
+                    <h3>[Categoria, es. Soft Skills / Lingue]</h3>
+                    <ul class="skill-list">
+                        <!-- INSERISCI LE TUE COMPETENZE PRINCIPALI -->
+                        <li>[Soft Skill / Lingua 1]</li>
+                        <li>[Soft Skill / Lingua 2]</li>
+                        <li>[Soft Skill / Lingua 3]</li>
+                        <li>[Soft Skill / Lingua 4]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPERIENZA PROFESSIONALE -->
+    <section class="section bg-light" id="esperienza">
+        <div class="container fade-in">
+            <h2 class="section-title">Esperienza Professionale</h2>
+            
+            <div class="timeline">
+                <!-- INSERISCI ESPERIENZA LAVORATIVA 1 -->
+                <div class="timeline-item card hover-up">
+                    <div class="timeline-date">[Mese Anno Inizio] - [Presente / Mese Anno Fine]</div>
+                    <h3 class="timeline-role">[Inserisci il tuo Ruolo Attuale/Più Recente]</h3>
+                    <h4 class="timeline-company">[Nome Azienda]</h4>
+                    <p class="timeline-desc">[Descrivi brevemente le tue responsabilità principali e, cosa fondamentale per i recruiter, i <strong>risultati misurabili</strong> o l'impatto che hai avuto nel team.]</p>
+                </div>
+
+                <!-- INSERISCI ESPERIENZA LAVORATIVA 2 -->
+                <div class="timeline-item card hover-up">
+                    <div class="timeline-date">[Mese Anno Inizio] - [Mese Anno Fine]</div>
+                    <h3 class="timeline-role">[Inserisci il tuo Ruolo Precedente]</h3>
+                    <h4 class="timeline-company">[Nome Azienda]</h4>
+                    <p class="timeline-desc">[Descrizione delle responsabilità e dei traguardi. Usa verbi d'azione come "Gestito", "Sviluppato", "Ottimizzato", "Progettato".]</p>
+                </div>
+                
+                <!-- INSERISCI ESPERIENZA LAVORATIVA 3 (se necessario) -->
+                <div class="timeline-item card hover-up">
+                    <div class="timeline-date">[Mese Anno Inizio] - [Mese Anno Fine]</div>
+                    <h3 class="timeline-role">[Inserisci un altro Ruolo Precedente]</h3>
+                    <h4 class="timeline-company">[Nome Azienda]</h4>
+                    <p class="timeline-desc">[Aggiungi altre esperienze rilevanti. Se ne hai troppe, inserisci solo le ultime 3-4 più importanti.]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMAZIONE -->
+    <section class="section" id="formazione">
+        <div class="container fade-in">
+            <h2 class="section-title">Formazione</h2>
+            
+            <div class="education-grid">
+                <!-- INSERISCI LA TUA FORMAZIONE 1 -->
+                <div class="education-item card hover-up">
+                    <div class="edu-year">[Anno Inizio] - [Anno Fine]</div>
+                    <h3 class="edu-degree">[Titolo di Studio, es. Laurea Magistrale in...]</h3>
+                    <h4 class="edu-school">[Nome Istituto / Università]</h4>
+                    <p class="edu-details">[Opzionale: Voto di laurea, titolo della tesi o materie più rilevanti per la tua carriera]</p>
+                </div>
+
+                <!-- INSERISCI LA TUA FORMAZIONE 2 -->
+                <div class="education-item card hover-up">
+                    <div class="edu-year">[Anno Inizio] - [Anno Fine]</div>
+                    <h3 class="edu-degree">[Corso, Master o Certificazione]</h3>
+                    <h4 class="edu-school">[Ente Erogatore]</h4>
+                    <p class="edu-details">[Opzionale: Breve descrizione di cosa hai imparato in questo corso o certificazione conseguita]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section class="section contact-section" id="contatti">
+        <div class="container fade-in">
+            <h2 class="section-title">Contattami</h2>
+            <p class="section-subtitle">Sono disponibile per nuove opportunità lavorative. Non esitare a contattarmi per fare due chiacchiere!</p>
+            
+            <div class="contact-info">
+                <!-- INSERISCI I TUOI CONTATTI -->
+                <a href="mailto:[latuaemail@esempio.com]" class="contact-link card hover-up">
+                    <span class="icon">✉️</span>
+                    <span class="contact-text">[latuaemail@esempio.com]</span>
+                </a>
+                
+                <a href="tel:[+390000000000]" class="contact-link card hover-up">
+                    <span class="icon">📱</span>
+                    <span class="contact-text">[+39 000 0000000]</span>
+                </a>
+
+                <a href="[Inserisci link LinkedIn]" target="_blank" rel="noopener noreferrer" class="contact-link card hover-up">
+                    <span class="icon">💼</span>
+                    <span class="contact-text">LinkedIn Profile</span>
+                </a>
+
+                <!-- Aggiungi altri link come GitHub, Dribbble, ecc. se necessario -->
+                <a href="[Inserisci link GitHub o Portfolio]" target="_blank" rel="noopener noreferrer" class="contact-link card hover-up">
+                    <span class="icon">🔗</span>
+                    <span class="contact-text">Il Mio GitHub / Behance</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> [Inserisci il tuo nome]. Tutti i diritti riservati.</p>
+            <div class="footer-links">
+                <!-- Opzionale: Link a policy o altri documenti -->
+                <a href="#">[Eventuale Link Aggiuntivo - Es. Scarica il CV in PDF]</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
