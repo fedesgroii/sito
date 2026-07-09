@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Inserisci il tuo nome] - Portfolio Professionale</title>
-    <!-- Font moderni: Inter -->
+
+    <!-- MODIFICA QUI: Aggiorna il titolo con il tuo nome e ruolo target -->
+    <title>Federico Sgroi — Junior Developer | Portfolio</title>
+
+    <!-- MODIFICA QUI: Descrizione per SEO e social sharing -->
+    <meta name="description" content="Portfolio professionale di Federico Sgroi — Junior Developer. Progetti, esperienze professionali, volontariato e competenze tecniche.">
+    <meta name="author" content="Federico Sgroi">
+    <meta name="theme-color" content="#0b0f19">
+
+    <!-- Font: Inter (ottimizzato con preconnect + display=swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Fogli di stile -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Foglio di stile -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- HEADER / NAVIGAZIONE -->
-    <header class="navbar">
+    <!-- ============================================================
+         HEADER / NAVIGAZIONE FISSA
+         ============================================================ -->
+    <header class="navbar" id="navbar">
         <div class="container nav-container">
-            <!-- NOME (Logo) -->
-            <a href="#" class="logo">[Inserisci il tuo nome]</a>
-            
-            <nav class="nav-menu">
+            <!-- MODIFICA QUI: Inserisci il tuo nome o un logo -->
+            <a href="#" class="logo">Federico Sgroi</a>
+
+            <nav class="nav-menu" id="navMenu">
                 <ul class="nav-list">
-                    <li><a href="#chi-sono" class="nav-link">Chi Sono</a></li>
-                    <li><a href="#competenze" class="nav-link">Competenze</a></li>
-                    <li><a href="#esperienza" class="nav-link">Esperienza</a></li>
-                    <li><a href="#formazione" class="nav-link">Formazione</a></li>
-                    <li><a href="#contatti" class="nav-link btn-contact">Contattami</a></li>
+                    <li><a href="#progetti" class="nav-link">Progetti</a></li>
+                    <li><a href="#esperienze" class="nav-link">Esperienze</a></li>
+                    <li><a href="#volontariato" class="nav-link">Volontariato</a></li>
+                    <li><a href="#contatti" class="nav-link">Contatti</a></li>
+                    <li>
+                        <!-- MODIFICA QUI: Sostituisci il link con il percorso al tuo file CV.pdf
+                             Metti il file nella cartella del progetto, es: "assets/Federico_Sgroi_CV.pdf" -->
+                        <a href="#" class="btn btn--download" id="downloadCV" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                            </svg>
+                            Scarica CV
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            
-            <!-- Menu Hamburger per Mobile -->
-            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+
+            <!-- Hamburger (mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Apri il menu di navigazione" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -38,185 +60,443 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (Intro) -->
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
     <section class="hero" id="home">
-        <div class="container hero-content fade-in">
-            <h1 class="hero-title">Ciao, sono <span class="highlight">[Inserisci il tuo nome]</span></h1>
-            <h2 class="hero-subtitle">[Inserisci il tuo Ruolo/Qualifica Professionale, es. Sviluppatore Web | UX/UI Designer]</h2>
-            <p class="hero-text">[Inserisci una brevissima frase d'impatto o il tuo obiettivo professionale. Es: Creo esperienze digitali intuitive e performanti con particolare attenzione ai dettagli.]</p>
+        <div class="container hero-content">
+            <!-- Badge stato: indica che sei disponibile -->
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                <!-- MODIFICA QUI: Cambia il testo del badge, es. "Open to Work" o "Disponibile" -->
+                Disponibile per nuove opportunità
+            </div>
+
+            <!-- MODIFICA QUI: Il tuo nome completo -->
+            <h1 class="hero-title">
+                Ciao, sono<br>
+                <span class="gradient-text">Federico Sgroi</span>
+            </h1>
+
+            <!-- MODIFICA QUI: Il tuo titolo professionale / ruolo target -->
+            <h2 class="hero-subtitle">Junior Developer</h2>
+
+            <!-- MODIFICA QUI: Una tagline d'impatto (1-2 righe) che riassuma chi sei e cosa fai -->
+            <p class="hero-tagline">
+                Trasformo idee in esperienze digitali — con codice pulito,
+                attenzione ai dettagli e la curiosità di chi non smette mai di imparare.
+            </p>
+
+            <!-- Call-to-Action: link diretti senza pagine intermedie -->
             <div class="hero-cta">
-                <a href="#contatti" class="btn btn-primary">Lavoriamo Insieme</a>
-                <a href="#esperienza" class="btn btn-secondary">Vedi Esperienze</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CHI SONO -->
-    <section class="section bg-light" id="chi-sono">
-        <div class="container fade-in">
-            <h2 class="section-title">Chi Sono</h2>
-            <div class="about-grid">
-                <!-- Se hai una foto, puoi inserirla qui. Altrimenti puoi lasciare questo o rimuoverlo -->
-                <div class="about-image-placeholder">
-                    <span>[Inserisci la tua foto qui - opzionale]</span>
-                </div>
-                <div class="about-text">
-                    <!-- INSERISCI LA TUA DESCRIZIONE PERSONALE -->
-                    <p>[Inserisci la tua descrizione personale. Parla brevemente di te, della tua passione per il tuo lavoro, dei tuoi valori e di cosa ti distingue. Mantieni un tono professionale ma autentico.]</p>
-                    <p>[Puoi aggiungere un secondo paragrafo per dettagliare meglio i tuoi punti di forza, il tuo approccio lavorativo o cosa stai cercando attualmente per la tua carriera.]</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPETENZE -->
-    <section class="section" id="competenze">
-        <div class="container fade-in">
-            <h2 class="section-title">Competenze</h2>
-            <p class="section-subtitle">[Inserisci una breve introduzione sulle tue abilità principali e strumenti di cui hai padronanza]</p>
-            
-            <div class="skills-container">
-                <!-- Categoria Competenze 1 -->
-                <div class="skill-category card hover-up">
-                    <h3>[Categoria, es. Competenze Tecniche]</h3>
-                    <ul class="skill-list">
-                        <!-- INSERISCI LE TUE COMPETENZE PRINCIPALI -->
-                        <li>[Competenza 1]</li>
-                        <li>[Competenza 2]</li>
-                        <li>[Competenza 3]</li>
-                        <li>[Competenza 4]</li>
-                    </ul>
-                </div>
-
-                <!-- Categoria Competenze 2 -->
-                <div class="skill-category card hover-up">
-                    <h3>[Categoria, es. Strumenti & Software]</h3>
-                    <ul class="skill-list">
-                        <!-- INSERISCI LE TUE COMPETENZE PRINCIPALI -->
-                        <li>[Competenza 1]</li>
-                        <li>[Competenza 2]</li>
-                        <li>[Competenza 3]</li>
-                        <li>[Competenza 4]</li>
-                    </ul>
-                </div>
-                
-                <!-- Categoria Competenze 3 -->
-                <div class="skill-category card hover-up">
-                    <h3>[Categoria, es. Soft Skills / Lingue]</h3>
-                    <ul class="skill-list">
-                        <!-- INSERISCI LE TUE COMPETENZE PRINCIPALI -->
-                        <li>[Soft Skill / Lingua 1]</li>
-                        <li>[Soft Skill / Lingua 2]</li>
-                        <li>[Soft Skill / Lingua 3]</li>
-                        <li>[Soft Skill / Lingua 4]</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ESPERIENZA PROFESSIONALE -->
-    <section class="section bg-light" id="esperienza">
-        <div class="container fade-in">
-            <h2 class="section-title">Esperienza Professionale</h2>
-            
-            <div class="timeline">
-                <!-- INSERISCI ESPERIENZA LAVORATIVA 1 -->
-                <div class="timeline-item card hover-up">
-                    <div class="timeline-date">[Mese Anno Inizio] - [Presente / Mese Anno Fine]</div>
-                    <h3 class="timeline-role">[Inserisci il tuo Ruolo Attuale/Più Recente]</h3>
-                    <h4 class="timeline-company">[Nome Azienda]</h4>
-                    <p class="timeline-desc">[Descrivi brevemente le tue responsabilità principali e, cosa fondamentale per i recruiter, i <strong>risultati misurabili</strong> o l'impatto che hai avuto nel team.]</p>
-                </div>
-
-                <!-- INSERISCI ESPERIENZA LAVORATIVA 2 -->
-                <div class="timeline-item card hover-up">
-                    <div class="timeline-date">[Mese Anno Inizio] - [Mese Anno Fine]</div>
-                    <h3 class="timeline-role">[Inserisci il tuo Ruolo Precedente]</h3>
-                    <h4 class="timeline-company">[Nome Azienda]</h4>
-                    <p class="timeline-desc">[Descrizione delle responsabilità e dei traguardi. Usa verbi d'azione come "Gestito", "Sviluppato", "Ottimizzato", "Progettato".]</p>
-                </div>
-                
-                <!-- INSERISCI ESPERIENZA LAVORATIVA 3 (se necessario) -->
-                <div class="timeline-item card hover-up">
-                    <div class="timeline-date">[Mese Anno Inizio] - [Mese Anno Fine]</div>
-                    <h3 class="timeline-role">[Inserisci un altro Ruolo Precedente]</h3>
-                    <h4 class="timeline-company">[Nome Azienda]</h4>
-                    <p class="timeline-desc">[Aggiungi altre esperienze rilevanti. Se ne hai troppe, inserisci solo le ultime 3-4 più importanti.]</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMAZIONE -->
-    <section class="section" id="formazione">
-        <div class="container fade-in">
-            <h2 class="section-title">Formazione</h2>
-            
-            <div class="education-grid">
-                <!-- INSERISCI LA TUA FORMAZIONE 1 -->
-                <div class="education-item card hover-up">
-                    <div class="edu-year">[Anno Inizio] - [Anno Fine]</div>
-                    <h3 class="edu-degree">[Titolo di Studio, es. Laurea Magistrale in...]</h3>
-                    <h4 class="edu-school">[Nome Istituto / Università]</h4>
-                    <p class="edu-details">[Opzionale: Voto di laurea, titolo della tesi o materie più rilevanti per la tua carriera]</p>
-                </div>
-
-                <!-- INSERISCI LA TUA FORMAZIONE 2 -->
-                <div class="education-item card hover-up">
-                    <div class="edu-year">[Anno Inizio] - [Anno Fine]</div>
-                    <h3 class="edu-degree">[Corso, Master o Certificazione]</h3>
-                    <h4 class="edu-school">[Ente Erogatore]</h4>
-                    <p class="edu-details">[Opzionale: Breve descrizione di cosa hai imparato in questo corso o certificazione conseguita]</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTATTI -->
-    <section class="section contact-section" id="contatti">
-        <div class="container fade-in">
-            <h2 class="section-title">Contattami</h2>
-            <p class="section-subtitle">Sono disponibile per nuove opportunità lavorative. Non esitare a contattarmi per fare due chiacchiere!</p>
-            
-            <div class="contact-info">
-                <!-- INSERISCI I TUOI CONTATTI -->
-                <a href="mailto:[latuaemail@esempio.com]" class="contact-link card hover-up">
-                    <span class="icon">✉️</span>
-                    <span class="contact-text">[latuaemail@esempio.com]</span>
+                <a href="#progetti" class="btn btn--primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
+                    Vedi i miei Progetti
                 </a>
-                
-                <a href="tel:[+390000000000]" class="contact-link card hover-up">
-                    <span class="icon">📱</span>
-                    <span class="contact-text">[+39 000 0000000]</span>
-                </a>
-
-                <a href="[Inserisci link LinkedIn]" target="_blank" rel="noopener noreferrer" class="contact-link card hover-up">
-                    <span class="icon">💼</span>
-                    <span class="contact-text">LinkedIn Profile</span>
-                </a>
-
-                <!-- Aggiungi altri link come GitHub, Dribbble, ecc. se necessario -->
-                <a href="[Inserisci link GitHub o Portfolio]" target="_blank" rel="noopener noreferrer" class="contact-link card hover-up">
-                    <span class="icon">🔗</span>
-                    <span class="contact-text">Il Mio GitHub / Behance</span>
+                <!-- MODIFICA QUI: Sostituisci il link con il tuo profilo LinkedIn -->
+                <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    Contattami su LinkedIn
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+
+    <!-- ============================================================
+         SEZIONE: PROGETTI (Focus Principale)
+         ============================================================ -->
+    <section class="section section--alt" id="progetti">
         <div class="container">
-            <p>&copy; <span id="year"></span> [Inserisci il tuo nome]. Tutti i diritti riservati.</p>
-            <div class="footer-links">
-                <!-- Opzionale: Link a policy o altri documenti -->
-                <a href="#">[Eventuale Link Aggiuntivo - Es. Scarica il CV in PDF]</a>
+            <div class="section-header reveal">
+                <span class="section-label">📂 Portfolio</span>
+                <h2 class="section-title">Progetti</h2>
+                <p class="section-subtitle">
+                    Una selezione di progetti universitari e personali.
+                    Ogni card mostra tecnologie usate, risultati e link al codice.
+                </p>
             </div>
+
+            <div class="projects-grid reveal-stagger">
+
+                <!-- ── PROGETTO 1 ── -->
+                <!-- MODIFICA QUI: Inserisci il nome, la descrizione, il tech stack e i link del tuo progetto universitario più rilevante -->
+                <div class="card project-card">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">🎓</div>
+                        <h3 class="project-card__title">[Nome Progetto Universitario] — [Ruolo/Tecnologia]</h3>
+                    </div>
+                    <p class="project-card__desc">
+                        [Inserisci qui il nome del progetto universitario più rilevante.
+                        Descrivi in 2-3 righe il problema risolto e il risultato ottenuto.
+                        Es: "Applicazione web per la gestione di inventario che ha ridotto i tempi di ricerca del 60%."]
+                    </p>
+                    <div class="project-card__tags">
+                        <!-- MODIFICA QUI: Sostituisci con le tecnologie usate -->
+                        <span class="tag">[Tecnologia 1]</span>
+                        <span class="tag">[Tecnologia 2]</span>
+                        <span class="tag">[Tecnologia 3]</span>
+                    </div>
+                    <div class="project-card__links">
+                        <!-- MODIFICA QUI: Link al repository GitHub -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <!-- MODIFICA QUI: Link alla demo (opzionale, rimuovi se non presente) -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                            Demo Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ── PROGETTO 2 ── -->
+                <!-- MODIFICA QUI: Inserisci i dati del tuo secondo progetto -->
+                <div class="card project-card">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">⚡</div>
+                        <h3 class="project-card__title">[Nome Progetto Personale] — [Ruolo/Tecnologia]</h3>
+                    </div>
+                    <p class="project-card__desc">
+                        [Descrivi il progetto personale più interessante che hai realizzato.
+                        Concentrati sul valore creato: quale problema risolveva?
+                        Es: "Bot Telegram per la notifica di sconti su Amazon, con 500+ utenti attivi."]
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">[Tecnologia 1]</span>
+                        <span class="tag">[Tecnologia 2]</span>
+                    </div>
+                    <div class="project-card__links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                            Demo Live
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ── PROGETTO 3 ── -->
+                <!-- MODIFICA QUI: Inserisci i dati del tuo terzo progetto -->
+                <div class="card project-card">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">🛠️</div>
+                        <h3 class="project-card__title">[Nome Progetto] — [Ruolo/Tecnologia]</h3>
+                    </div>
+                    <p class="project-card__desc">
+                        [Terzo progetto da aggiungere. Può essere un progetto open-source,
+                        un contributo a un team, o un side-project tecnico.
+                        Ricorda: i recruiter cercano risultati concreti, non solo descrizioni.]
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">[Tecnologia 1]</span>
+                        <span class="tag">[Tecnologia 2]</span>
+                        <span class="tag">[Tecnologia 3]</span>
+                        <span class="tag">[Tecnologia 4]</span>
+                    </div>
+                    <div class="project-card__links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ── PROGETTO 4 (opzionale — duplica questa card per aggiungere altri progetti) ── -->
+                <!-- MODIFICA QUI: Aggiungi un quarto progetto o rimuovi questo blocco -->
+                <div class="card project-card">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">🌐</div>
+                        <h3 class="project-card__title">[Nome Progetto] — [Ruolo/Tecnologia]</h3>
+                    </div>
+                    <p class="project-card__desc">
+                        [Quarto progetto opzionale. Puoi rimuovere questa card se non hai
+                        altri progetti da mostrare, oppure duplicarla per aggiungerne di nuovi.
+                        Suggerimento: includi almeno 3 progetti per dare varietà al portfolio.]
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">[Tecnologia 1]</span>
+                        <span class="tag">[Tecnologia 2]</span>
+                    </div>
+                    <div class="project-card__links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                            Demo Live
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- /projects-grid -->
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SEZIONE: ESPERIENZE PROFESSIONALI (Timeline)
+         ============================================================ -->
+    <section class="section" id="esperienze">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">💼 Carriera</span>
+                <h2 class="section-title">Esperienze Professionali</h2>
+                <p class="section-subtitle">
+                    Il mio percorso lavorativo con focus sui risultati raggiunti e le competenze applicate.
+                </p>
+            </div>
+
+            <div class="timeline reveal">
+
+                <!-- ── ESPERIENZA 1 (Più recente) ── -->
+                <!-- MODIFICA QUI: Inserisci il tuo ruolo attuale o più recente -->
+                <div class="timeline-item card">
+                    <span class="timeline-date">[Mese Anno] — Presente</span>
+                    <h3 class="timeline-role">[Ruolo Attuale] presso [Azienda]</h3>
+                    <h4 class="timeline-company">[Nome Azienda / Ente]</h4>
+                    <ul class="timeline-bullets">
+                        <!-- MODIFICA QUI: 2-3 bullet point sui risultati misurabili ottenuti -->
+                        <li>[Risultato 1: usa verbi d'azione e numeri. Es: "Sviluppato un sistema REST API che gestisce 10.000+ richieste/giorno"]</li>
+                        <li>[Risultato 2: Es: "Ridotto i tempi di deploy del 35% implementando una pipeline CI/CD con GitHub Actions"]</li>
+                        <li>[Risultato 3: Es: "Collaborato con un team di 5 sviluppatori in metodologia Agile/Scrum"]</li>
+                    </ul>
+                </div>
+
+                <!-- ── ESPERIENZA 2 ── -->
+                <!-- MODIFICA QUI: Inserisci la tua esperienza precedente -->
+                <div class="timeline-item card">
+                    <span class="timeline-date">[Mese Anno] — [Mese Anno]</span>
+                    <h3 class="timeline-role">[Ruolo Precedente] presso [Azienda]</h3>
+                    <h4 class="timeline-company">[Nome Azienda / Ente]</h4>
+                    <ul class="timeline-bullets">
+                        <li>[Risultato 1: descrivi l'impatto concreto del tuo lavoro]</li>
+                        <li>[Risultato 2: quantifica dove possibile — percentuali, numeri, tempistiche]</li>
+                    </ul>
+                </div>
+
+                <!-- ── ESPERIENZA 3 (opzionale) ── -->
+                <!-- MODIFICA QUI: Aggiungi un'altra esperienza o rimuovi questo blocco se non necessario -->
+                <div class="timeline-item card">
+                    <span class="timeline-date">[Mese Anno] — [Mese Anno]</span>
+                    <h3 class="timeline-role">[Altro Ruolo] presso [Azienda]</h3>
+                    <h4 class="timeline-company">[Nome Azienda / Ente]</h4>
+                    <ul class="timeline-bullets">
+                        <li>[Inserisci solo le esperienze più rilevanti. Se ne hai molte, scegli le ultime 3-4.]</li>
+                        <li>[Ogni bullet point deve comunicare valore, non solo mansioni.]</li>
+                    </ul>
+                </div>
+
+            </div><!-- /timeline -->
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SEZIONE: VOLONTARIATO & BENEFICENZA
+         ============================================================ -->
+    <section class="section section--alt" id="volontariato">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">🤝 Impegno Sociale</span>
+                <h2 class="section-title">Volontariato & Beneficenza</h2>
+                <p class="section-subtitle">
+                    Le esperienze che dimostrano i miei valori, le soft skills
+                    e la capacità di lavorare per obiettivi condivisi.
+                </p>
+            </div>
+
+            <div class="volunteer-grid reveal-stagger">
+
+                <!-- ── VOLONTARIATO 1 ── -->
+                <!-- MODIFICA QUI: Inserisci la tua esperienza di volontariato -->
+                <div class="card">
+                    <h3 class="volunteer-card__role">[Ruolo Volontario] presso [Organizzazione]</h3>
+                    <p class="volunteer-card__org">[Nome Organizzazione / ONG / Associazione]</p>
+                    <p class="volunteer-card__period">[Mese Anno] — [Mese Anno o Presente]</p>
+
+                    <div class="volunteer-card__impact">
+                        <p class="volunteer-card__impact-title">▸ Impatto Sociale</p>
+                        <p>[Descrivi l'impatto concreto del tuo contributo. Es: "Organizzato 3 eventi di raccolta fondi
+                            che hanno raccolto oltre €5.000 per famiglie in difficoltà. Coordinato un team di 12 volontari."]</p>
+                    </div>
+
+                    <p class="volunteer-card__skills-title">▸ Competenze Trasversali Acquisite</p>
+                    <div class="volunteer-card__skills">
+                        <!-- MODIFICA QUI: Le soft skills sviluppate -->
+                        <span class="volunteer-card__skill-tag">[Leadership]</span>
+                        <span class="volunteer-card__skill-tag">[Teamwork]</span>
+                        <span class="volunteer-card__skill-tag">[Public Speaking]</span>
+                        <span class="volunteer-card__skill-tag">[Problem Solving]</span>
+                    </div>
+                </div>
+
+                <!-- ── VOLONTARIATO 2 ── -->
+                <!-- MODIFICA QUI: Aggiungi un'altra esperienza di volontariato o rimuovi questo blocco -->
+                <div class="card">
+                    <h3 class="volunteer-card__role">[Ruolo Volontario] presso [Organizzazione]</h3>
+                    <p class="volunteer-card__org">[Nome Organizzazione / ONG / Associazione]</p>
+                    <p class="volunteer-card__period">[Mese Anno] — [Mese Anno o Presente]</p>
+
+                    <div class="volunteer-card__impact">
+                        <p class="volunteer-card__impact-title">▸ Impatto Sociale</p>
+                        <p>[Descrivi cosa hai fatto e perché è stato importante.
+                            Es: "Tutoraggio settimanale di matematica per studenti delle medie in contesti disagiati —
+                            100% dei miei studenti ha superato l'anno scolastico."]</p>
+                    </div>
+
+                    <p class="volunteer-card__skills-title">▸ Competenze Trasversali Acquisite</p>
+                    <div class="volunteer-card__skills">
+                        <span class="volunteer-card__skill-tag">[Empatia]</span>
+                        <span class="volunteer-card__skill-tag">[Comunicazione]</span>
+                        <span class="volunteer-card__skill-tag">[Gestione del tempo]</span>
+                    </div>
+                </div>
+
+            </div><!-- /volunteer-grid -->
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SEZIONE: FORMAZIONE (Sintetica)
+         ============================================================ -->
+    <section class="section" id="formazione">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">🎓 Istruzione</span>
+                <h2 class="section-title">Formazione</h2>
+            </div>
+
+            <div class="education-grid reveal-stagger">
+
+                <!-- ── LAUREA / TITOLO PRINCIPALE ── -->
+                <!-- MODIFICA QUI: Il tuo percorso di studi principale -->
+                <div class="card">
+                    <span class="edu-card__year">[Anno Inizio] — [Anno Fine]</span>
+                    <h3 class="edu-card__degree">[Laurea Triennale/Magistrale in…]</h3>
+                    <h4 class="edu-card__school">[Nome Università]</h4>
+                    <p class="edu-card__details">
+                        [Opzionale: Voto di laurea, titolo della tesi e argomento principale.
+                        Es: "110/110 con lode — Tesi: 'Ottimizzazione di reti neurali per il riconoscimento vocale'"]
+                    </p>
+                </div>
+
+                <!-- ── ALTRO TITOLO / CERTIFICAZIONE (opzionale) ── -->
+                <!-- MODIFICA QUI: Aggiungi un'eventuale certificazione o secondo titolo -->
+                <div class="card">
+                    <span class="edu-card__year">[Anno Inizio] — [Anno Fine]</span>
+                    <h3 class="edu-card__degree">[Diploma / Certificazione / Corso]</h3>
+                    <h4 class="edu-card__school">[Nome Istituto / Ente Erogatore]</h4>
+                    <p class="edu-card__details">
+                        [Opzionale: Dettagli rilevanti per la posizione a cui aspiri.]
+                    </p>
+                </div>
+
+            </div><!-- /education-grid -->
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SEZIONE: CONTATTI
+         ============================================================ -->
+    <section class="section section--alt" id="contatti">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">📬 Get in Touch</span>
+                <h2 class="section-title">Contattami</h2>
+                <p class="section-subtitle">
+                    Sono disponibile per nuove opportunità. Scrivimi direttamente
+                    — niente form, niente pagine intermedie.
+                </p>
+            </div>
+
+            <div class="projects-grid reveal-stagger" style="max-width:700px; margin: 0 auto;">
+
+                <!-- Email diretto -->
+                <!-- MODIFICA QUI: Sostituisci con la tua email reale -->
+                <a href="mailto:sgroi.federico@gmail.com" class="card project-card" style="text-decoration:none;">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">✉️</div>
+                        <h3 class="project-card__title">Email</h3>
+                    </div>
+                    <p class="project-card__desc">sgroi.federico@gmail.com</p>
+                </a>
+
+                <!-- LinkedIn diretto -->
+                <!-- MODIFICA QUI: Sostituisci con il tuo profilo LinkedIn reale -->
+                <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener noreferrer" class="card project-card" style="text-decoration:none;">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">💼</div>
+                        <h3 class="project-card__title">LinkedIn</h3>
+                    </div>
+                    <p class="project-card__desc">linkedin.com/in/tuo-profilo</p>
+                </a>
+
+                <!-- GitHub diretto -->
+                <!-- MODIFICA QUI: Sostituisci con il tuo profilo GitHub reale -->
+                <a href="https://github.com/tuo-username" target="_blank" rel="noopener noreferrer" class="card project-card" style="text-decoration:none;">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">🔗</div>
+                        <h3 class="project-card__title">GitHub</h3>
+                    </div>
+                    <p class="project-card__desc">github.com/tuo-username</p>
+                </a>
+
+                <!-- Telefono diretto -->
+                <!-- MODIFICA QUI: Sostituisci con il tuo numero di telefono reale -->
+                <a href="tel:+393278177551" class="card project-card" style="text-decoration:none;">
+                    <div class="project-card__header">
+                        <div class="project-card__icon">📱</div>
+                        <h3 class="project-card__title">Telefono</h3>
+                    </div>
+                    <p class="project-card__desc">+39 327 81 77 551</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         FOOTER MINIMAL
+         ============================================================ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+
+            <!-- Copyright (anno aggiornato automaticamente da JS) -->
+            <p class="footer-copy">&copy; <span id="year"></span> Federico Sgroi. Tutti i diritti riservati.</p>
+
+            <!-- Link social diretti -->
+            <div class="footer-social">
+                <!-- MODIFICA QUI: Link LinkedIn -->
+                <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener noreferrer" class="footer-social__link" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <!-- MODIFICA QUI: Link GitHub -->
+                <a href="https://github.com/tuo-username" target="_blank" rel="noopener noreferrer" class="footer-social__link" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <!-- MODIFICA QUI: Link Email -->
+                <a href="mailto:sgroi.federico@gmail.com" class="footer-social__link" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                </a>
+            </div>
+
+            <!-- MODIFICA QUI: Aggiorna con la tua email -->
+            <a href="mailto:sgroi.federico@gmail.com" class="footer-email">sgroi.federico@gmail.com</a>
         </div>
     </footer>
 
-    <!-- Script JavaScript -->
+
+    <!-- Script JavaScript (caricato in fondo per performance) -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
