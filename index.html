@@ -1,502 +1,678 @@
+<!-- Dichiara il tipo di documento come HTML5 -->
 <!DOCTYPE html>
+<!-- Inizio del documento HTML con lingua impostata su italiano -->
 <html lang="it">
+<!-- Contenitore delle informazioni di intestazione e configurazione della pagina -->
 
 <head>
+    <!-- Imposta la codifica dei caratteri in UTF-8 per supportare lettere accentate ed emoji -->
     <meta charset="UTF-8">
+    <!-- Configura la visualizzazione responsive per adattare il layout a smartphone, tablet e PC -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- MODIFICA QUI: Aggiorna il titolo con il tuo nome e ruolo target -->
-    <title>Federico Sgroi — Junior Developer | Portfolio</title>
-
-    <!-- MODIFICA QUI: Descrizione per SEO e social sharing -->
-    <meta name="description" content="Portfolio professionale di Federico Sgroi — Junior Developer. Progetti, esperienze professionali, volontariato e competenze tecniche.">
+    <!-- Definisce il titolo della scheda del browser, ottimizzato per motori di ricerca (SEO) -->
+    <title>Federico Sgroi — Software Engineer | Laureando in Ingegneria Informatica</title>
+    <!-- Descrizione meta utilizzata dai motori di ricerca nei risultati di ricerca -->
+    <meta name="description"
+        content="Portfolio di Federico Sgroi, Software Engineer e laureando in Ingegneria Informatica. Progetti desktop/database, corsi rilevanti e competenze.">
+    <!-- Specifica l'autore della pagina web -->
     <meta name="author" content="Federico Sgroi">
+    <!-- Imposta il colore della barra degli indirizzi sui browser mobili per uniformarsi al design del sito -->
     <meta name="theme-color" content="#0b0f19">
-
-    <!-- Font: Inter (ottimizzato con preconnect + display=swap) -->
+    <!-- Ottimizza la connessione al server dei font Google precaricando la connessione DNS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Ottimizza la connessione al server statico dei font abilitando la condivisione delle risorse tra origini (CORS) -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Carica la famiglia di caratteri 'Inter' con diversi pesi di carattere e ne velocizza la visualizzazione -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Foglio di stile -->
+    <!-- Collega il foglio di stile CSS esterno contenente il design grafico e il layout del sito -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Chiusura del tag head -->
 </head>
+<!-- Inizio del corpo del documento che contiene la parte visibile all'utente -->
 
 <body>
-
-    <!-- ============================================================
-         HEADER / NAVIGAZIONE FISSA
-         ============================================================ -->
+    <!-- Intestazione fissa del sito contenente la barra di navigazione -->
     <header class="navbar" id="navbar">
+        <!-- Container centrato per allineare il logo e il menu -->
         <div class="container nav-container">
-            <!-- MODIFICA QUI: Inserisci il tuo nome o un logo -->
+            <!-- Logo testuale con il nome dell'ingegnere che punta all'inizio della pagina -->
             <a href="#" class="logo">Federico Sgroi</a>
-
+            <!-- Elemento contenitore del menu di navigazione principale -->
             <nav class="nav-menu" id="navMenu">
+                <!-- Lista ordinata di collegamenti di navigazione -->
                 <ul class="nav-list">
+                    <!-- Collegamento rapido alla sezione Progetti -->
                     <li><a href="#progetti" class="nav-link">Progetti</a></li>
-                    <li><a href="#esperienze" class="nav-link">Esperienze</a></li>
-                    <li><a href="#volontariato" class="nav-link">Volontariato</a></li>
+                    <!-- Collegamento rapido alla sezione Formazione -->
+                    <li><a href="#formazione" class="nav-link">Formazione</a></li>
+                    <!-- Collegamento rapido alla sezione Tech Toolbox (Competenze) -->
+                    <li><a href="#toolbox" class="nav-link">Tech Toolbox</a></li>
+                    <!-- Collegamento rapido alla sezione Contatti -->
                     <li><a href="#contatti" class="nav-link">Contatti</a></li>
+                    <!-- Elemento della lista per il pulsante del Curriculum Vitae -->
                     <li>
-                        <!-- MODIFICA QUI: Sostituisci il link con il percorso al tuo file CV.pdf
-                             Metti il file nella cartella del progetto, es: "assets/Federico_Sgroi_CV.pdf" -->
+                        <!-- Pulsante per scaricare il CV con icona integrata -->
                         <a href="#" class="btn btn--download" id="downloadCV" download>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                            <!-- Icona SVG che rappresenta la freccia di download -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <!-- Tracciato grafico della freccia rivolta verso il basso con base orizzontale -->
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                <!-- Fine dell'elemento icona SVG -->
                             </svg>
+                            <!-- Testo visibile sul pulsante di download -->
                             Scarica CV
+                            <!-- Chiusura del pulsante di download -->
                         </a>
+                        <!-- Chiusura del list item della barra di navigazione -->
                     </li>
+                    <!-- Chiusura della lista ordinata della barra di navigazione -->
                 </ul>
+                <!-- Chiusura dell'elemento menu nav -->
             </nav>
-
-            <!-- Hamburger (mobile) -->
+            <!-- Pulsante hamburger per dispositivi mobili (aria-expanded indica l'accessibilità dello stato) -->
             <button class="hamburger" id="hamburger" aria-label="Apri il menu di navigazione" aria-expanded="false">
+                <!-- Prima barra dell'icona hamburger -->
                 <span class="bar"></span>
+                <!-- Seconda barra dell'icona hamburger -->
                 <span class="bar"></span>
+                <!-- Terza barra dell'icona hamburger -->
                 <span class="bar"></span>
+                <!-- Chiusura del pulsante hamburger -->
             </button>
+            <!-- Chiusura del container della navbar -->
         </div>
+        <!-- Chiusura dell'header principale -->
     </header>
-
-
-    <!-- ============================================================
-         HERO SECTION
-         ============================================================ -->
+    <!-- Sezione di presentazione (Hero) all'inizio del sito -->
     <section class="hero" id="home">
+        <!-- Contenitore centrato per il testo della sezione Hero -->
         <div class="container hero-content">
-            <!-- Badge stato: indica che sei disponibile -->
+            <!-- Badge luminoso indicante la disponibilità lavorativa attuale -->
             <div class="hero-badge">
+                <!-- Pallino lampeggiante animato in CSS -->
                 <span class="pulse"></span>
-                <!-- MODIFICA QUI: Cambia il testo del badge, es. "Open to Work" o "Disponibile" -->
+                <!-- Testo descrittivo dello stato lavorativo -->
                 Disponibile per nuove opportunità
+                <!-- Chiusura del div badge -->
             </div>
-
-            <!-- MODIFICA QUI: Il tuo nome completo -->
+            <!-- Titolo principale con il nome personale in rilievo -->
             <h1 class="hero-title">
+                <!-- Testo di benvenuto iniziale con a capo per formattazione mobile -->
                 Ciao, sono<br>
+                <!-- Nome personale evidenziato con un gradiente di colori moderno -->
                 <span class="gradient-text">Federico Sgroi</span>
+                <!-- Chiusura del tag H1 -->
             </h1>
-
-            <!-- MODIFICA QUI: Il tuo titolo professionale / ruolo target -->
-            <h2 class="hero-subtitle">Junior Developer</h2>
-
-            <!-- MODIFICA QUI: Una tagline d'impatto (1-2 righe) che riassuma chi sei e cosa fai -->
+            <!-- Ruolo accademico e professionale target del profilo -->
+            <h2 class="hero-subtitle">Software Engineer | Laureando in Ingegneria Informatica</h2>
+            <!-- Slogan d'impatto descrittivo della filosofia professionale -->
             <p class="hero-tagline">
                 Trasformo idee in esperienze digitali — con codice pulito,
                 attenzione ai dettagli e la curiosità di chi non smette mai di imparare.
+                <!-- Chiusura del paragrafo slogan -->
             </p>
-
-            <!-- Call-to-Action: link diretti senza pagine intermedie -->
+            <!-- Gruppo di pulsanti di chiamata all'azione (CTA) -->
             <div class="hero-cta">
+                <!-- Pulsante principale per scorrere ai progetti sul portfolio -->
                 <a href="#progetti" class="btn btn--primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg>
+                    <!-- Icona SVG a forma di cartella per i progetti -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor">
+                        <!-- Disegno dei bordi della cartella con linee vettoriali -->
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                        <!-- Chiusura dell'icona cartella -->
+                    </svg>
+                    <!-- Testo del pulsante principale -->
                     Vedi i miei Progetti
+                    <!-- Chiusura del tag a del pulsante primario -->
                 </a>
-                <!-- MODIFICA QUI: Sostituisci il link con il tuo profilo LinkedIn -->
-                <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <!-- Pulsante secondario per collegarsi al profilo professionale di LinkedIn -->
+                <a href="https://www.linkedin.com/in/federico-sgroi-5bb560234?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                    <!-- Icona SVG ufficiale del logo LinkedIn -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <!-- Tracciato vettoriale del logo 'in' di LinkedIn -->
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        <!-- Chiusura dell'icona LinkedIn -->
+                    </svg>
+                    <!-- Testo del pulsante secondario -->
                     Contattami su LinkedIn
+                    <!-- Chiusura del tag a del pulsante secondario -->
                 </a>
+                <!-- Chiusura del div dei pulsanti di CTA -->
             </div>
+            <!-- Chiusura del contenitore centrale della Hero -->
         </div>
+        <!-- Chiusura della sezione Hero -->
     </section>
-
-
-    <!-- ============================================================
-         SEZIONE: PROGETTI (Focus Principale)
-         ============================================================ -->
+    <!-- Sezione che ospita il portfolio dei progetti con sfondo alternato grigio scuro -->
     <section class="section section--alt" id="progetti">
+        <!-- Contenitore dei contenuti della sezione Progetti -->
         <div class="container">
+            <!-- Intestazione della sezione con etichetta, titolo principale e sottotitolo descrittivo -->
             <div class="section-header reveal">
+                <!-- Etichetta della sezione con emoji -->
                 <span class="section-label">📂 Portfolio</span>
+                <!-- Titolo della sezione -->
                 <h2 class="section-title">Progetti</h2>
+                <!-- Sottotitolo descrittivo con l'obiettivo della sezione -->
                 <p class="section-subtitle">
-                    Una selezione di progetti universitari e personali.
+                    Una selezione di progetti universitari rilevanti.
                     Ogni card mostra tecnologie usate, risultati e link al codice.
+                    <!-- Chiusura del sottotitolo -->
                 </p>
+                <!-- Chiusura dell'header di sezione -->
             </div>
-
+            <!-- Griglia dei progetti con animazione di comparsa scaglionata (stagger) -->
             <div class="projects-grid reveal-stagger">
-
-                <!-- ── PROGETTO 1 ── -->
-                <!-- MODIFICA QUI: Inserisci il nome, la descrizione, il tech stack e i link del tuo progetto universitario più rilevante -->
+                <!-- Prima card progetto: Grossista di piante -->
                 <div class="card project-card">
+                    <!-- Intestazione della prima card con icona tematica ed titolo -->
                     <div class="project-card__header">
-                        <div class="project-card__icon">🎓</div>
-                        <h3 class="project-card__title">[Nome Progetto Universitario] — [Ruolo/Tecnologia]</h3>
+                        <!-- Icona di un germoglio per il grossista di piante -->
+                        <div class="project-card__icon">🌱</div>
+                        <!-- Titolo del progetto con tipologia di database e stack primario -->
+                        <h3 class="project-card__title">Grossista di piante – Database relazionale (Java + SQL)</h3>
+                        <!-- Chiusura dell'header della card -->
                     </div>
+                    <!-- Descrizione testuale del progetto con problematiche e risultati tecnici -->
                     <p class="project-card__desc">
-                        [Inserisci qui il nome del progetto universitario più rilevante.
-                        Descrivi in 2-3 righe il problema risolto e il risultato ottenuto.
-                        Es: "Applicazione web per la gestione di inventario che ha ridotto i tempi di ricerca del 60%."]
+                        Progettazione di un database relazionale ottimizzato per la gestione di un'azienda grossista di
+                        piante. Ho implementato un gestionale completo per il monitoraggio di magazzino, vendite e
+                        fornitori, riducendo i tempi di risposta delle query complesse tramite indici, vistas
+                        materializzate e procedure store. L'applicazione desktop in Java offre un'interfaccia CLI per
+                        l'inserimento e la consultazione dei dati.
+                        <!-- Chiusura della descrizione -->
                     </p>
+                    <!-- Contenitore delle etichette (tag) tecnologiche usate nel progetto -->
                     <div class="project-card__tags">
-                        <!-- MODIFICA QUI: Sostituisci con le tecnologie usate -->
-                        <span class="tag">[Tecnologia 1]</span>
-                        <span class="tag">[Tecnologia 2]</span>
-                        <span class="tag">[Tecnologia 3]</span>
+                        <!-- Tag per Java -->
+                        <span class="tag">Java</span>
+                        <!-- Tag per MySQL -->
+                        <span class="tag">SQL (MySQL)</span>
+                        <!-- Tag per JDBC -->
+                        <span class="tag">JDBC</span>
+                        <!-- Tag per l'architettura MVC -->
+                        <span class="tag">Pattern MVC</span>
+                        <!-- Tag per l'architettura BCE -->
+                        <span class="tag">Pattern BCE</span>
+                        <!-- Chiusura del contenitore tag -->
                     </div>
+                    <!-- Contenitore dei link di codice sorgente e demo online -->
                     <div class="project-card__links">
-                        <!-- MODIFICA QUI: Link al repository GitHub -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        <!-- Link al repository GitHub del progetto -->
+                        <a href="https://github.com/fedesgroii/basi_da_dati_esame.git" target="_blank"
+                            rel="noopener noreferrer" class="project-card__link">
+                            <!-- Icona SVG del logo GitHub -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <!-- Vettori grafici del gattino Octocat di GitHub -->
+                                <path
+                                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                <!-- Fine icona GitHub -->
+                            </svg>
                             GitHub
+                            <!-- Chiusura del link GitHub -->
                         </a>
-                        <!-- MODIFICA QUI: Link alla demo (opzionale, rimuovi se non presente) -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                        <!-- Link segnaposto alla Live Demo -->
+                        <a href="https://live-demo.example.com" target="_blank" rel="noopener noreferrer"
+                            class="project-card__link">
+                            <!-- Icona SVG con freccia esterna per demo live -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <!-- Tracciato freccia in alto a destra per link esterno -->
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                <!-- Fine icona demo live -->
+                            </svg>
                             Demo Live
+                            <!-- Chiusura del link della demo -->
                         </a>
+                        <!-- Chiusura del contenitore link -->
                     </div>
+                    <!-- Chiusura della prima card progetto -->
                 </div>
-
-                <!-- ── PROGETTO 2 ── -->
-                <!-- MODIFICA QUI: Inserisci i dati del tuo secondo progetto -->
+                <!-- Seconda card progetto: Software per studio medico -->
                 <div class="card project-card">
+                    <!-- Intestazione della seconda card con icona tematica ed titolo -->
                     <div class="project-card__header">
-                        <div class="project-card__icon">⚡</div>
-                        <h3 class="project-card__title">[Nome Progetto Personale] — [Ruolo/Tecnologia]</h3>
+                        <!-- Icona di uno stetoscopio medico -->
+                        <div class="project-card__icon">🩺</div>
+                        <!-- Titolo del progetto con indicazione della natura desktop e del corso -->
+                        <h3 class="project-card__title">Gestione Appuntamenti e Cartelle Cliniche – Java Desktop</h3>
+                        <!-- Chiusura dell'header della card -->
                     </div>
+                    <!-- Descrizione testuale del progetto con dettagli architetturali, database e shop -->
                     <p class="project-card__desc">
-                        [Descrivi il progetto personale più interessante che hai realizzato.
-                        Concentrati sul valore creato: quale problema risolveva?
-                        Es: "Bot Telegram per la notifica di sconti su Amazon, con 500+ utenti attivi."]
+                        Piattaforma desktop per la prenotazione di visite mediche e la gestione completa delle schede
+                        pazienti (anamnesi, storico visite, pagamenti). Il software supporta sia lo specialista sia il
+                        cliente, ognuno con un portale separato.
+                        L'architettura segue il pattern MVC, con un database relazionale che memorizza dati
+                        anagrafici, visite e transazioni, e include funzionalità avanzate come un'area articoli/shop
+                        personalizzata per lo studio medico.
+                        <!-- Chiusura della descrizione -->
                     </p>
+                    <!-- Contenitore dei tag tecnologici usati nel progetto medico -->
                     <div class="project-card__tags">
-                        <span class="tag">[Tecnologia 1]</span>
-                        <span class="tag">[Tecnologia 2]</span>
+                        <!-- Tag per Java -->
+                        <span class="tag">Java</span>
+                        <!-- Tag per MySQL -->
+                        <span class="tag">SQL (MySQL)</span>
+                        <!-- Tag per JDBC -->
+                        <span class="tag">JDBC</span>
+                        <!-- Tag per il pattern Model-View-Controller -->
+                        <span class="tag">Pattern MVC</span>
+                        <!-- Chiusura del contenitore tag -->
                     </div>
+                    <!-- Contenitore dei link di codice sorgente e demo online -->
                     <div class="project-card__links">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        <!-- Link al repository GitHub del codice dell'esame ISPW -->
+                        <a href="https://github.com/fedesgroii/ISPW2_prog_2026.git" target="_blank"
+                            rel="noopener noreferrer" class="project-card__link">
+                            <!-- Icona SVG di GitHub -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <!-- Disegno dell'icona GitHub -->
+                                <path
+                                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                                <!-- Fine icona GitHub -->
+                            </svg>
                             GitHub
+                            <!-- Chiusura del link GitHub -->
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                        <!-- Link segnaposto alla Live Demo -->
+                        <a href="https://live-demo.example.com" target="_blank" rel="noopener noreferrer"
+                            class="project-card__link">
+                            <!-- Icona SVG della demo live -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <!-- Disegno freccia esterna -->
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                <!-- Fine icona demo live -->
+                            </svg>
                             Demo Live
+                            <!-- Chiusura del link della demo -->
                         </a>
+                        <!-- Chiusura del contenitore link -->
                     </div>
+                    <!-- Chiusura della seconda card progetto -->
                 </div>
-
-                <!-- ── PROGETTO 3 ── -->
-                <!-- MODIFICA QUI: Inserisci i dati del tuo terzo progetto -->
-                <div class="card project-card">
-                    <div class="project-card__header">
-                        <div class="project-card__icon">🛠️</div>
-                        <h3 class="project-card__title">[Nome Progetto] — [Ruolo/Tecnologia]</h3>
-                    </div>
-                    <p class="project-card__desc">
-                        [Terzo progetto da aggiungere. Può essere un progetto open-source,
-                        un contributo a un team, o un side-project tecnico.
-                        Ricorda: i recruiter cercano risultati concreti, non solo descrizioni.]
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">[Tecnologia 1]</span>
-                        <span class="tag">[Tecnologia 2]</span>
-                        <span class="tag">[Tecnologia 3]</span>
-                        <span class="tag">[Tecnologia 4]</span>
-                    </div>
-                    <div class="project-card__links">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ── PROGETTO 4 (opzionale — duplica questa card per aggiungere altri progetti) ── -->
-                <!-- MODIFICA QUI: Aggiungi un quarto progetto o rimuovi questo blocco -->
-                <div class="card project-card">
-                    <div class="project-card__header">
-                        <div class="project-card__icon">🌐</div>
-                        <h3 class="project-card__title">[Nome Progetto] — [Ruolo/Tecnologia]</h3>
-                    </div>
-                    <p class="project-card__desc">
-                        [Quarto progetto opzionale. Puoi rimuovere questa card se non hai
-                        altri progetti da mostrare, oppure duplicarla per aggiungerne di nuovi.
-                        Suggerimento: includi almeno 3 progetti per dare varietà al portfolio.]
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">[Tecnologia 1]</span>
-                        <span class="tag">[Tecnologia 2]</span>
-                    </div>
-                    <div class="project-card__links">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                            GitHub
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                            Demo Live
-                        </a>
-                    </div>
-                </div>
-
-            </div><!-- /projects-grid -->
-        </div>
-    </section>
-
-
-    <!-- ============================================================
-         SEZIONE: ESPERIENZE PROFESSIONALI (Timeline)
-         ============================================================ -->
-    <section class="section" id="esperienze">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">💼 Carriera</span>
-                <h2 class="section-title">Esperienze Professionali</h2>
-                <p class="section-subtitle">
-                    Il mio percorso lavorativo con focus sui risultati raggiunti e le competenze applicate.
-                </p>
+                <!-- Chiusura del contenitore griglia progetti -->
             </div>
-
-            <div class="timeline reveal">
-
-                <!-- ── ESPERIENZA 1 (Più recente) ── -->
-                <!-- MODIFICA QUI: Inserisci il tuo ruolo attuale o più recente -->
-                <div class="timeline-item card">
-                    <span class="timeline-date">[Mese Anno] — Presente</span>
-                    <h3 class="timeline-role">[Ruolo Attuale] presso [Azienda]</h3>
-                    <h4 class="timeline-company">[Nome Azienda / Ente]</h4>
-                    <ul class="timeline-bullets">
-                        <!-- MODIFICA QUI: 2-3 bullet point sui risultati misurabili ottenuti -->
-                        <li>[Risultato 1: usa verbi d'azione e numeri. Es: "Sviluppato un sistema REST API che gestisce 10.000+ richieste/giorno"]</li>
-                        <li>[Risultato 2: Es: "Ridotto i tempi di deploy del 35% implementando una pipeline CI/CD con GitHub Actions"]</li>
-                        <li>[Risultato 3: Es: "Collaborato con un team di 5 sviluppatori in metodologia Agile/Scrum"]</li>
-                    </ul>
-                </div>
-
-                <!-- ── ESPERIENZA 2 ── -->
-                <!-- MODIFICA QUI: Inserisci la tua esperienza precedente -->
-                <div class="timeline-item card">
-                    <span class="timeline-date">[Mese Anno] — [Mese Anno]</span>
-                    <h3 class="timeline-role">[Ruolo Precedente] presso [Azienda]</h3>
-                    <h4 class="timeline-company">[Nome Azienda / Ente]</h4>
-                    <ul class="timeline-bullets">
-                        <li>[Risultato 1: descrivi l'impatto concreto del tuo lavoro]</li>
-                        <li>[Risultato 2: quantifica dove possibile — percentuali, numeri, tempistiche]</li>
-                    </ul>
-                </div>
-
-                <!-- ── ESPERIENZA 3 (opzionale) ── -->
-                <!-- MODIFICA QUI: Aggiungi un'altra esperienza o rimuovi questo blocco se non necessario -->
-                <div class="timeline-item card">
-                    <span class="timeline-date">[Mese Anno] — [Mese Anno]</span>
-                    <h3 class="timeline-role">[Altro Ruolo] presso [Azienda]</h3>
-                    <h4 class="timeline-company">[Nome Azienda / Ente]</h4>
-                    <ul class="timeline-bullets">
-                        <li>[Inserisci solo le esperienze più rilevanti. Se ne hai molte, scegli le ultime 3-4.]</li>
-                        <li>[Ogni bullet point deve comunicare valore, non solo mansioni.]</li>
-                    </ul>
-                </div>
-
-            </div><!-- /timeline -->
+            <!-- Chiusura del contenitore di sezione -->
         </div>
+        <!-- Chiusura della sezione progetti -->
     </section>
-
-
-    <!-- ============================================================
-         SEZIONE: VOLONTARIATO & BENEFICENZA
-         ============================================================ -->
-    <section class="section section--alt" id="volontariato">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">🤝 Impegno Sociale</span>
-                <h2 class="section-title">Volontariato & Beneficenza</h2>
-                <p class="section-subtitle">
-                    Le esperienze che dimostrano i miei valori, le soft skills
-                    e la capacità di lavorare per obiettivi condivisi.
-                </p>
-            </div>
-
-            <div class="volunteer-grid reveal-stagger">
-
-                <!-- ── VOLONTARIATO 1 ── -->
-                <!-- MODIFICA QUI: Inserisci la tua esperienza di volontariato -->
-                <div class="card">
-                    <h3 class="volunteer-card__role">[Ruolo Volontario] presso [Organizzazione]</h3>
-                    <p class="volunteer-card__org">[Nome Organizzazione / ONG / Associazione]</p>
-                    <p class="volunteer-card__period">[Mese Anno] — [Mese Anno o Presente]</p>
-
-                    <div class="volunteer-card__impact">
-                        <p class="volunteer-card__impact-title">▸ Impatto Sociale</p>
-                        <p>[Descrivi l'impatto concreto del tuo contributo. Es: "Organizzato 3 eventi di raccolta fondi
-                            che hanno raccolto oltre €5.000 per famiglie in difficoltà. Coordinato un team di 12 volontari."]</p>
-                    </div>
-
-                    <p class="volunteer-card__skills-title">▸ Competenze Trasversali Acquisite</p>
-                    <div class="volunteer-card__skills">
-                        <!-- MODIFICA QUI: Le soft skills sviluppate -->
-                        <span class="volunteer-card__skill-tag">[Leadership]</span>
-                        <span class="volunteer-card__skill-tag">[Teamwork]</span>
-                        <span class="volunteer-card__skill-tag">[Public Speaking]</span>
-                        <span class="volunteer-card__skill-tag">[Problem Solving]</span>
-                    </div>
-                </div>
-
-                <!-- ── VOLONTARIATO 2 ── -->
-                <!-- MODIFICA QUI: Aggiungi un'altra esperienza di volontariato o rimuovi questo blocco -->
-                <div class="card">
-                    <h3 class="volunteer-card__role">[Ruolo Volontario] presso [Organizzazione]</h3>
-                    <p class="volunteer-card__org">[Nome Organizzazione / ONG / Associazione]</p>
-                    <p class="volunteer-card__period">[Mese Anno] — [Mese Anno o Presente]</p>
-
-                    <div class="volunteer-card__impact">
-                        <p class="volunteer-card__impact-title">▸ Impatto Sociale</p>
-                        <p>[Descrivi cosa hai fatto e perché è stato importante.
-                            Es: "Tutoraggio settimanale di matematica per studenti delle medie in contesti disagiati —
-                            100% dei miei studenti ha superato l'anno scolastico."]</p>
-                    </div>
-
-                    <p class="volunteer-card__skills-title">▸ Competenze Trasversali Acquisite</p>
-                    <div class="volunteer-card__skills">
-                        <span class="volunteer-card__skill-tag">[Empatia]</span>
-                        <span class="volunteer-card__skill-tag">[Comunicazione]</span>
-                        <span class="volunteer-card__skill-tag">[Gestione del tempo]</span>
-                    </div>
-                </div>
-
-            </div><!-- /volunteer-grid -->
-        </div>
-    </section>
-
-
-    <!-- ============================================================
-         SEZIONE: FORMAZIONE (Sintetica)
-         ============================================================ -->
+    <!-- Sezione Formazione / Istruzione scolastica con sfondo scuro -->
     <section class="section" id="formazione">
+        <!-- Contenitore centrale della sezione Formazione -->
         <div class="container">
+            <!-- Intestazione della sezione con etichetta e titolo -->
             <div class="section-header reveal">
+                <!-- Etichetta della sezione con emoji del tocco accademico -->
                 <span class="section-label">🎓 Istruzione</span>
+                <!-- Titolo principale della sezione formazione -->
                 <h2 class="section-title">Formazione</h2>
+                <!-- Chiusura dell'header -->
             </div>
 
+            <!-- Griglia di formazione che contiene la card di laurea -->
             <div class="education-grid reveal-stagger">
-
-                <!-- ── LAUREA / TITOLO PRINCIPALE ── -->
-                <!-- MODIFICA QUI: Il tuo percorso di studi principale -->
+                <!-- Card principale dei dettagli universitari -->
                 <div class="card">
-                    <span class="edu-card__year">[Anno Inizio] — [Anno Fine]</span>
-                    <h3 class="edu-card__degree">[Laurea Triennale/Magistrale in…]</h3>
-                    <h4 class="edu-card__school">[Nome Università]</h4>
-                    <p class="edu-card__details">
-                        [Opzionale: Voto di laurea, titolo della tesi e argomento principale.
-                        Es: "110/110 con lode — Tesi: 'Ottimizzazione di reti neurali per il riconoscimento vocale'"]
-                    </p>
+                    <!-- Periodo accademico -->
+                    <span class="edu-card__year">2022 — in corso (mancano 2 esami)</span>
+                    <!-- Titolo accademico in corso -->
+                    <h3 class="edu-card__degree">Laurea Triennale in Ingegneria Informatica</h3>
+                    <!-- Nome dell'università statale -->
+                    <h4 class="edu-card__school">Università degli Studi di Roma <br> "Tor Vergata"</h4>
+                    <!-- Dettagli sulla tesi di laurea -->
+                    <p class="edu-card__details" style="margin-bottom: 1.5rem;">Tesi: non ancora assegnata</p>
+                    <!-- Contenitore interno con bordo per mostrare i corsi più rilevanti sostenuti -->
+                    <div style="border-top: 1px solid var(--border); margin: 1.5rem 0; padding-top: 1.5rem;">
+                        <!-- Titolo dell'elenco dei corsi rilevanti -->
+                        <h4 style="font-size: 1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600;">
+                            Corsi Rilevanti:</h4>
+                        <!-- Lista contenente i singoli corsi formativi -->
+                        <ul
+                            style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <!-- Corso di Basi di dati -->
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <!-- Nome del corso in grassetto -->
+                                <strong style="color: var(--text-primary);">• Basi di Dati:</strong> Progettazione DB
+                                relazionali, ottimizzazione query, procedure store.
+                                <!-- Fine del list item del corso -->
+                            </li>
+                            <!-- Corso di ISPW -->
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <!-- Nome del corso in grassetto -->
+                                <strong style="color: var(--text-primary);">• Ingegneria del Software e Progettazione
+                                    Web (ISPW):</strong> Pattern architetturali, MVC, BCE, UML.
+                                <!-- Fine del list item del corso -->
+                            </li>
+                            <!-- Corso di Sistemi Operativi -->
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <!-- Nome del corso in grassetto -->
+                                <strong style="color: var(--text-primary);">• Sistemi Operativi:</strong> Processi,
+                                thread, semafori, programmazione concorrente.
+                                <!-- Fine del list item del corso -->
+                            </li>
+                            <!-- Corso di Ingegneria dell'Internet e Web -->
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <!-- Nome del corso in grassetto -->
+                                <strong style="color: var(--text-primary);">• Ingegneria dell'Internet e Web
+                                    (IIW):</strong> Crittografia, SSL/TLS, HTTPS, REST/SOAP, DNS, CDN, certificati
+                                digitali.
+                                <!-- Fine del list item del corso -->
+                            </li>
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <!-- Nome del corso in grassetto -->
+                                <strong style="color: var(--text-primary);">• Calcolatori Elettronici:</strong>
+                                Architettura dei calcolatori, Gestione delle risorse hardware e software, Linguaggio
+                                Assembly.
+                                <!-- Fine del list item del corso -->
+                            </li>
+                            <!-- Chiusura della lista dei corsi -->
+                        </ul>
+                        <!-- Chiusura del blocco dei corsi rilevanti -->
+                    </div>
+                    <!-- Chiusura della card di istruzione -->
                 </div>
+                <!-- Chiusura del contenitore griglia formazione -->
+            </div>
+            <!-- Chiusura del container della sezione -->
 
-                <!-- ── ALTRO TITOLO / CERTIFICAZIONE (opzionale) ── -->
-                <!-- MODIFICA QUI: Aggiungi un'eventuale certificazione o secondo titolo -->
-                <div class="card">
-                    <span class="edu-card__year">[Anno Inizio] — [Anno Fine]</span>
-                    <h3 class="edu-card__degree">[Diploma / Certificazione / Corso]</h3>
-                    <h4 class="edu-card__school">[Nome Istituto / Ente Erogatore]</h4>
-                    <p class="edu-card__details">
-                        [Opzionale: Dettagli rilevanti per la posizione a cui aspiri.]
-                    </p>
+
+
+
+
+
+            <div class="card">
+                <!-- Periodo accademico -->
+                <span class="edu-card__year">2017 — 2022</span>
+                <!-- Titolo accademico in corso -->
+                <h3 class="edu-card__degree">Diploma di Perito Informatico e Telecomunicazioni</h3>
+                <!-- Nome dell'università statale -->
+                <h4 class="edu-card__school">I.I.S. Di Vittorio - Lattanzio</h4>
+
+                <!-- Contenitore interno con bordo per mostrare i corsi più rilevanti sostenuti -->
+                <div style="border-top: 1px solid var(--border); margin: 1.5rem 0; padding-top: 1.5rem;">
+                    <!-- Titolo dell'elenco dei corsi rilevanti -->
+                    <h4 style="font-size: 1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600;">
+                        Materie Rilevanti:</h4>
+                    <!-- Lista contenente i singoli corsi formativi -->
+                    <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <!-- Corso di Basi di dati -->
+                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                            <!-- Nome del corso in grassetto -->
+                            <strong style="color: var(--text-primary);">• Informatica:</strong> Programmazione java
+                            (base), PHP (intermedio), basi di dati (avanzato)
+                            <!-- Fine del list item del corso -->
+                        </li>
+                        <!-- Corso di ISPW -->
+                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                            <!-- Nome del corso in grassetto -->
+                            <strong style="color: var(--text-primary);">• Ingegneria del Software e Progettazione
+                                Web (ISPW):</strong> Pattern architetturali, MVC, BCE, UML.
+                            <!-- Fine del list item del corso -->
+                        </li>
+                        <!-- Corso di Sistemi Operativi -->
+                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                            <!-- Nome del corso in grassetto -->
+                            <strong style="color: var(--text-primary);">• Sistemi Operativi:</strong> Processi,
+                            thread, semafori, programmazione concorrente.
+                            <!-- Fine del list item del corso -->
+                        </li>
+                        <!-- Corso di Ingegneria dell'Internet e Web -->
+                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                            <!-- Nome del corso in grassetto -->
+                            <strong style="color: var(--text-primary);">• Ingegneria dell'Internet e Web
+                                (IIW):</strong> Crittografia, SSL/TLS, HTTPS, REST/SOAP, DNS, CDN, certificati
+                            digitali.
+                            <!-- Fine del list item del corso -->
+                        </li>
+                        <!-- Chiusura della lista dei corsi -->
+                    </ul>
+                    <!-- Chiusura del blocco dei corsi rilevanti -->
                 </div>
+                <!-- Chiusura della card di istruzione -->
+            </div>
 
-            </div><!-- /education-grid -->
+
+
+
+
         </div>
+        <!-- Chiusura della sezione formazione -->
     </section>
-
-
-    <!-- ============================================================
-         SEZIONE: CONTATTI
-         ============================================================ -->
-    <section class="section section--alt" id="contatti">
+    <!-- Sezione Tech Toolbox per esporre le tecnologie e competenze, con sfondo alternato -->
+    <section class="section section--alt" id="toolbox">
+        <!-- Contenitore della sezione Tech Toolbox -->
         <div class="container">
+            <!-- Intestazione della sezione con etichetta, titolo e descrizione -->
             <div class="section-header reveal">
+                <!-- Etichetta della sezione con emoji per gli strumenti tecnici -->
+                <span class="section-label">🛠️ Competenze</span>
+                <!-- Titolo principale della sezione competenze -->
+                <h2 class="section-title">Tech Toolbox</h2>
+                <!-- Sottotitolo di sintesi delle competenze -->
+                <p class="section-subtitle">
+                    Linguaggi di programmazione, strumenti di sviluppo e aree dell'informatica in cui mi sto
+                    specializzando.
+                    <!-- Chiusura del sottotitolo -->
+                </p>
+                <!-- Chiusura dell'header -->
+            </div>
+            <!-- Griglia a tre colonne per dividere le competenze in categorie -->
+            <div class="projects-grid reveal-stagger" style="max-width: 900px; margin: 0 auto;">
+                <!-- Card 1: Linguaggi conosciuti -->
+                <div class="card project-card" style="padding: 24px;">
+                    <!-- Intestazione della card dei linguaggi -->
+                    <div class="project-card__header" style="margin-bottom: 12px;">
+                        <!-- Icona di un computer -->
+                        <div class="project-card__icon" style="font-size: 1.5rem; margin-right: 12px;">💻</div>
+                        <!-- Titolo della card -->
+                        <h3 class="project-card__title" style="font-size: 1.1rem; color: var(--accent-light);">Linguaggi
+                        </h3>
+                        <!-- Chiusura header card -->
+                    </div>
+                    <!-- Contenuto testuale dei linguaggi di programmazione -->
+                    <p class="project-card__desc"
+                        style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 12px; font-weight: 500;">
+                        Java, SQL, JavaScript (basi)
+                        <!-- Chiusura del paragrafo linguaggi -->
+                    </p>
+                    <!-- Chiusura card linguaggi -->
+                </div>
+                <!-- Card 2: Strumenti e Tecnologie utilizzate -->
+                <div class="card project-card" style="padding: 24px;">
+                    <!-- Intestazione della card degli strumenti -->
+                    <div class="project-card__header" style="margin-bottom: 12px;">
+                        <!-- Icona di un ingranaggio per il tooling -->
+                        <div class="project-card__icon" style="font-size: 1.5rem; margin-right: 12px;">⚙️</div>
+                        <!-- Titolo della card strumenti -->
+                        <h3 class="project-card__title" style="font-size: 1.1rem; color: var(--accent-light);">Strumenti
+                            & Tech</h3>
+                        <!-- Chiusura header card strumenti -->
+                    </div>
+                    <!-- Contenuto testuale degli strumenti e tecnologie utilizzate -->
+                    <p class="project-card__desc"
+                        style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 12px; font-weight: 500;">
+                        IntelliJ IDEA, Git, GitHub, JDBC, PostgreSQL, MySQL, MVC, BCE
+                        <!-- Chiusura paragrafo strumenti -->
+                    </p>
+                    <!-- Chiusura card strumenti -->
+                </div>
+                <!-- Card 3: Aree di interesse accademico e lavorativo -->
+                <div class="card project-card" style="padding: 24px;">
+                    <!-- Intestazione della card aree di interesse -->
+                    <div class="project-card__header" style="margin-bottom: 12px;">
+                        <!-- Icona di un bersaglio per gli obiettivi/interessi -->
+                        <div class="project-card__icon" style="font-size: 1.5rem; margin-right: 12px;">🎯</div>
+                        <!-- Titolo della card aree di interesse -->
+                        <h3 class="project-card__title" style="font-size: 1.1rem; color: var(--accent-light);">Aree di
+                            Interesse</h3>
+                        <!-- Chiusura header card aree di interesse -->
+                    </div>
+                    <!-- Contenuto testuale degli argomenti informatici di preferenza -->
+                    <p class="project-card__desc"
+                        style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 12px; font-weight: 500;">
+                        Sviluppo desktop, Database relazionali, Ottimizzazione query, Architetture software, Sicurezza
+                        informatica (crittografia, HTTPS)
+                        <!-- Chiusura paragrafo aree di interesse -->
+                    </p>
+                    <!-- Chiusura card aree di interesse -->
+                </div>
+                <!-- Chiusura della griglia Tech Toolbox -->
+            </div>
+            <!-- Chiusura del container tech toolbox -->
+        </div>
+        <!-- Chiusura della sezione tech toolbox -->
+    </section>
+    <!-- Sezione Contatti con sfondo scuro -->
+    <section class="section" id="contatti">
+        <!-- Contenitore della sezione Contatti -->
+        <div class="container">
+            <!-- Intestazione della sezione con etichetta, titolo e descrizione -->
+            <div class="section-header reveal">
+                <!-- Etichetta con emoji di una busta per le lettere -->
                 <span class="section-label">📬 Get in Touch</span>
+                <!-- Titolo principale contatti -->
                 <h2 class="section-title">Contattami</h2>
+                <!-- Sottotitolo descrittivo per l'invio diretto di messaggi -->
                 <p class="section-subtitle">
                     Sono disponibile per nuove opportunità. Scrivimi direttamente
                     — niente form, niente pagine intermedie.
+                    <!-- Chiusura sottotitolo -->
                 </p>
+                <!-- Chiusura header contatti -->
             </div>
-
+            <!-- Griglia per disporre le card dei contatti, centrata con larghezza massima -->
             <div class="projects-grid reveal-stagger" style="max-width:700px; margin: 0 auto;">
-
-                <!-- Email diretto -->
-                <!-- MODIFICA QUI: Sostituisci con la tua email reale -->
+                <!-- Card Email: attiva il client email predefinito dell'utente -->
                 <a href="mailto:sgroi.federico@gmail.com" class="card project-card" style="text-decoration:none;">
+                    <!-- Intestazione della card email -->
                     <div class="project-card__header">
+                        <!-- Icona busta email -->
                         <div class="project-card__icon">✉️</div>
+                        <!-- Titolo del contatto -->
                         <h3 class="project-card__title">Email</h3>
+                        <!-- Chiusura header email -->
                     </div>
+                    <!-- Indirizzo email in chiaro per favorire il copia e incolla -->
                     <p class="project-card__desc">sgroi.federico@gmail.com</p>
+                    <!-- Chiusura card email -->
                 </a>
-
-                <!-- LinkedIn diretto -->
-                <!-- MODIFICA QUI: Sostituisci con il tuo profilo LinkedIn reale -->
-                <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener noreferrer" class="card project-card" style="text-decoration:none;">
+                <!-- Card LinkedIn: reindirizza al profilo LinkedIn personale dell'utente -->
+                <a href="https://www.linkedin.com/in/federico-sgroi-5bb560234?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    target="_blank" rel="noopener noreferrer" class="card project-card" style="text-decoration:none;">
+                    <!-- Intestazione della card LinkedIn -->
                     <div class="project-card__header">
+                        <!-- Icona cartella/professione per LinkedIn -->
                         <div class="project-card__icon">💼</div>
+                        <!-- Titolo LinkedIn -->
                         <h3 class="project-card__title">LinkedIn</h3>
+                        <!-- Chiusura header LinkedIn -->
                     </div>
-                    <p class="project-card__desc">linkedin.com/in/tuo-profilo</p>
+                    <!-- Testo abbreviato dell'URL di LinkedIn -->
+                    <p class="project-card__desc">linkedin.com/in/federico-sgroi</p>
+                    <!-- Chiusura card LinkedIn -->
                 </a>
-
-                <!-- GitHub diretto -->
-                <!-- MODIFICA QUI: Sostituisci con il tuo profilo GitHub reale -->
-                <a href="https://github.com/tuo-username" target="_blank" rel="noopener noreferrer" class="card project-card" style="text-decoration:none;">
+                <!-- Card GitHub: apre il profilo di hosting dei progetti -->
+                <a href="https://github.com/fedesgroii" target="_blank" rel="noopener noreferrer"
+                    class="card project-card" style="text-decoration:none;">
+                    <!-- Intestazione della card GitHub -->
                     <div class="project-card__header">
+                        <!-- Icona di un collegamento ipertestuale per GitHub -->
                         <div class="project-card__icon">🔗</div>
+                        <!-- Titolo GitHub -->
                         <h3 class="project-card__title">GitHub</h3>
+                        <!-- Chiusura header GitHub -->
                     </div>
-                    <p class="project-card__desc">github.com/tuo-username</p>
+                    <!-- Indirizzo testuale del profilo GitHub personale -->
+                    <p class="project-card__desc">github.com/fedesgroii</p>
+                    <!-- Chiusura card GitHub -->
                 </a>
-
-                <!-- Telefono diretto -->
-                <!-- MODIFICA QUI: Sostituisci con il tuo numero di telefono reale -->
+                <!-- Card Telefono: avvia la chiamata telefonica diretta sui dispositivi compatibili -->
                 <a href="tel:+393278177551" class="card project-card" style="text-decoration:none;">
+                    <!-- Intestazione della card telefono -->
                     <div class="project-card__header">
+                        <!-- Icona di uno smartphone -->
                         <div class="project-card__icon">📱</div>
+                        <!-- Titolo Telefono -->
                         <h3 class="project-card__title">Telefono</h3>
+                        <!-- Chiusura header telefono -->
                     </div>
+                    <!-- Numero di telefono visualizzabile -->
                     <p class="project-card__desc">+39 327 81 77 551</p>
+                    <!-- Chiusura card telefono -->
                 </a>
-
+                <!-- Chiusura griglia contatti -->
             </div>
+            <!-- Chiusura container contatti -->
         </div>
+        <!-- Chiusura sezione contatti -->
     </section>
-
-
-    <!-- ============================================================
-         FOOTER MINIMAL
-         ============================================================ -->
+    <!-- Piè di pagina (Footer) con layout minimale -->
     <footer class="footer">
+        <!-- Contenitore centrale del footer per allineare i vari blocchi di testo e link -->
         <div class="container footer-inner">
-
-            <!-- Copyright (anno aggiornato automaticamente da JS) -->
+            <!-- Testo di copyright del sito con anno aggiornato in automatico dallo script JS -->
             <p class="footer-copy">&copy; <span id="year"></span> Federico Sgroi. Tutti i diritti riservati.</p>
-
-            <!-- Link social diretti -->
+            <!-- Contenitore dei bottoni social rapidi nel footer -->
             <div class="footer-social">
-                <!-- MODIFICA QUI: Link LinkedIn -->
-                <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener noreferrer" class="footer-social__link" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <!-- Collegamento rapido a LinkedIn nel footer -->
+                <a href="https://www.linkedin.com/in/federico-sgroi-5bb560234?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    target="_blank" rel="noopener noreferrer" class="footer-social__link" aria-label="LinkedIn">
+                    <!-- Icona SVG di LinkedIn -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <!-- Tracciato logo LinkedIn -->
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        <!-- Chiusura icona LinkedIn -->
+                    </svg>
+                    <!-- Chiusura link social LinkedIn -->
                 </a>
-                <!-- MODIFICA QUI: Link GitHub -->
-                <a href="https://github.com/tuo-username" target="_blank" rel="noopener noreferrer" class="footer-social__link" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                <!-- Collegamento rapido a GitHub nel footer -->
+                <a href="https://github.com/fedesgroii" target="_blank" rel="noopener noreferrer"
+                    class="footer-social__link" aria-label="GitHub">
+                    <!-- Icona SVG di GitHub -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <!-- Tracciato logo GitHub -->
+                        <path
+                            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        <!-- Chiusura icona GitHub -->
+                    </svg>
+                    <!-- Chiusura link social GitHub -->
                 </a>
-                <!-- MODIFICA QUI: Link Email -->
+                <!-- Collegamento rapido per inviare una mail nel footer -->
                 <a href="mailto:sgroi.federico@gmail.com" class="footer-social__link" aria-label="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                    <!-- Icona SVG di una mail -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor">
+                        <!-- Tracciato vettoriale della mail -->
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        <!-- Chiusura icona mail -->
+                    </svg>
+                    <!-- Chiusura link social mail -->
                 </a>
+                <!-- Chiusura div icone social -->
             </div>
-
-            <!-- MODIFICA QUI: Aggiorna con la tua email -->
+            <!-- Testo del link email nel footer in chiaro -->
             <a href="mailto:sgroi.federico@gmail.com" class="footer-email">sgroi.federico@gmail.com</a>
+            <!-- Chiusura del div interno del footer -->
         </div>
+        <!-- Chiusura del footer -->
     </footer>
-
-
-    <!-- Script JavaScript (caricato in fondo per performance) -->
+    <!-- Script JavaScript principale caricato asincronamente alla fine del file per migliorare il rendering iniziale della pagina -->
     <script src="js/main.js"></script>
+    <!-- Chiusura del tag body -->
 </body>
+<!-- Chiusura definitiva del documento HTML -->
 
 </html>
