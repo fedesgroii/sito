@@ -12,12 +12,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // ─── Cache DOM ───────────────────────────────────────────
-    const hamburger   = document.getElementById('hamburger');
-    const navMenu     = document.getElementById('navMenu');
-    const navbar      = document.getElementById('navbar');
-    const navLinks    = document.querySelectorAll('.nav-link');
-    const yearSpan    = document.getElementById('year');
-    const sections    = document.querySelectorAll('.section');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const yearSpan = document.getElementById('year');
+    const sections = document.querySelectorAll('.section');
 
     // ─── 1. Menu Mobile (Hamburger) ─────────────────────────
     if (hamburger && navMenu) {
@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ─── 3. Active Nav Link Tracking ────────────────────────
     function updateActiveNavLink() {
         const scrollPos = window.scrollY + 120; // Offset per la navbar
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-            
+
             if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                 navLinks.forEach(link => {
                     link.classList.remove('nav-link--active');
@@ -117,16 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // ─── 6. Smooth Scroll con Offset ────────────────────────
     // Gestisce il click sui link interni tenendo conto dell'header fisso
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return; // Ignora i link vuoti "#"
-            
+
             const targetEl = document.querySelector(targetId);
             if (targetEl) {
                 e.preventDefault();
                 const navHeight = navbar ? navbar.offsetHeight : 0;
                 const targetPosition = targetEl.getBoundingClientRect().top + window.scrollY - navHeight - 16;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'

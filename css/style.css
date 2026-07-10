@@ -6,42 +6,54 @@
    =========================================================== */
 :root {
     /* ── Palette Colori ── */
-    --bg-primary:    #0b0f19;        /* Sfondo principale (quasi nero/blu) */
-    --bg-secondary:  #111827;        /* Sfondo sezioni alternate */
-    --bg-card:       #1a2035;        /* Sfondo delle card */
-    --bg-card-hover: #1f2a45;        /* Card al passaggio del mouse */
-    --surface:       rgba(255,255,255,0.04); /* Superfici glassmorphism */
+    --bg-primary: #0b0f19;
+    /* Sfondo principale (quasi nero/blu) */
+    --bg-secondary: #111827;
+    /* Sfondo sezioni alternate */
+    --bg-card: #1a2035;
+    /* Sfondo delle card */
+    --bg-card-hover: #1f2a45;
+    /* Card al passaggio del mouse */
+    --surface: rgba(255, 255, 255, 0.04);
+    /* Superfici glassmorphism */
 
-    --text-primary:  #f1f5f9;        /* Testo principale (quasi bianco) */
-    --text-secondary:#94a3b8;        /* Testo secondario (grigio chiaro) */
-    --text-muted:    #64748b;        /* Testo terziario */
+    --text-primary: #f1f5f9;
+    /* Testo principale (quasi bianco) */
+    --text-secondary: #94a3b8;
+    /* Testo secondario (grigio chiaro) */
+    --text-muted: #64748b;
+    /* Testo terziario */
 
-    --accent:        #6366f1;        /* Accento principale (indaco vivace) */
-    --accent-light:  #818cf8;        /* Accento chiaro */
-    --accent-glow:   rgba(99,102,241,0.25); /* Glow per ombre */
-    --accent-subtle: rgba(99,102,241,0.08); /* Sfondo sottile accent */
+    --accent: #6366f1;
+    /* Accento principale (indaco vivace) */
+    --accent-light: #818cf8;
+    /* Accento chiaro */
+    --accent-glow: rgba(99, 102, 241, 0.25);
+    /* Glow per ombre */
+    --accent-subtle: rgba(99, 102, 241, 0.08);
+    /* Sfondo sottile accent */
 
     --gradient-accent: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
-    --gradient-hero:   radial-gradient(ellipse at 20% 50%, rgba(99,102,241,0.15) 0%, transparent 50%),
-                       radial-gradient(ellipse at 80% 20%, rgba(139,92,246,0.10) 0%, transparent 50%);
+    --gradient-hero: radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.10) 0%, transparent 50%);
 
-    --success:       #22c55e;
-    --border:        rgba(255,255,255,0.06);
+    --success: #22c55e;
+    --border: rgba(255, 255, 255, 0.06);
 
     /* ── Tipografia ── */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
     /* ── Struttura ── */
-    --container-max:  1120px;
-    --radius-sm:      8px;
-    --radius-md:      14px;
-    --radius-lg:      20px;
-    --radius-full:    9999px;
+    --container-max: 1120px;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
 
     /* ── Ombre ── */
-    --shadow-sm:   0 1px 3px rgba(0,0,0,0.3);
-    --shadow-md:   0 4px 14px rgba(0,0,0,0.25);
-    --shadow-lg:   0 12px 36px rgba(0,0,0,0.35);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.35);
     --shadow-glow: 0 0 30px var(--accent-glow);
 
     /* ── Transizioni ── */
@@ -60,19 +72,23 @@
 *::after {
     margin: 0;
     padding: 0;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     -webkit-text-size-adjust: 100%;
 }
 
 body {
     font-family: var(--font-sans);
     background-color: var(--bg-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     line-height: 1.7;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -81,22 +97,33 @@ body {
 
 a {
     text-decoration: none;
+    /* Rimuove la sottolineatura dai link */
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     transition: color var(--transition-fast);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
-a:hover { color: var(--accent); }
+a:hover {
+    color: var(--accent);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
+}
 
-ul { list-style: none; }
+ul {
+    list-style: none;
+}
 
 img {
     display: block;
     max-width: 100%;
+    /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
 }
 
 ::selection {
     background: var(--accent);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     color: #fff;
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
 }
 
 
@@ -105,51 +132,72 @@ img {
    =========================================================== */
 .container {
     max-width: var(--container-max);
+    /* Larghezza massima consentita. Aumenta per rendere il box più largo */
     margin: 0 auto;
+    /* Centra orizzontalmente l'elemento blocco rispetto alla pagina */
     padding: 0 24px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
 }
 
 .section {
     padding: 120px 0;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     position: relative;
 }
 
 .section--alt {
     background-color: var(--bg-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
 }
 
 .section-header {
     text-align: center;
+    /* Centra il testo all'interno del suo contenitore */
     margin-bottom: 64px;
 }
 
 .section-label {
     display: inline-flex;
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
     gap: 8px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
     font-size: 0.8rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     text-transform: uppercase;
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     letter-spacing: 2px;
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 16px;
     background: var(--accent-subtle);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     padding: 6px 16px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     border-radius: var(--radius-full);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
 }
 
 .section-title {
     font-size: clamp(2rem, 5vw, 2.8rem);
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 800;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     letter-spacing: -0.5px;
     line-height: 1.2;
 }
 
 .section-subtitle {
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-size: 1.1rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     max-width: 600px;
+    /* Larghezza massima consentita. Aumenta per rendere il box più largo */
     margin: 16px auto 0;
     line-height: 1.7;
 }
@@ -161,59 +209,87 @@ img {
 .btn {
     display: inline-flex;
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
     justify-content: center;
+    /* Centra gli elementi orizzontalmente all'interno del contenitore */
     gap: 8px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
     padding: 14px 28px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     border-radius: var(--radius-sm);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     font-weight: 600;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     font-size: 0.95rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-family: inherit;
     cursor: pointer;
     transition: all var(--transition-fast);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
     border: 2px solid transparent;
     text-align: center;
+    /* Centra il testo all'interno del suo contenitore */
     white-space: nowrap;
 }
 
 .btn--primary {
     background: var(--gradient-accent);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     color: #fff;
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .btn--primary:hover {
     transform: translateY(-2px);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     box-shadow: 0 8px 25px var(--accent-glow);
     color: #fff;
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
 }
 
 .btn--secondary {
     background: transparent;
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border-color: var(--border);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     backdrop-filter: blur(4px);
 }
 
 .btn--secondary:hover {
     border-color: var(--accent);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     background: var(--accent-subtle);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     transform: translateY(-2px);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
 }
 
 .btn--download {
     background: var(--accent);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     color: #fff;
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     padding: 10px 20px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     font-size: 0.85rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     border-radius: var(--radius-sm);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     box-shadow: 0 2px 10px var(--accent-glow);
 }
 
 .btn--download:hover {
     background: var(--accent-light);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     color: #fff;
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     transform: translateY(-1px);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     box-shadow: 0 4px 18px var(--accent-glow);
 }
 
@@ -229,10 +305,14 @@ img {
    =========================================================== */
 .card {
     background: var(--bg-card);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border-radius: var(--radius-md);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     border: 1px solid var(--border);
     padding: 32px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     transition: all var(--transition-base);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
     position: relative;
     overflow: hidden;
 }
@@ -242,16 +322,22 @@ img {
     position: absolute;
     inset: 0;
     border-radius: inherit;
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     opacity: 0;
+    /* Rende l'elemento completamente trasparente (invisibile). Cambia a 1 per mostrarlo */
     transition: opacity var(--transition-base);
-    background: linear-gradient(135deg, rgba(99,102,241,0.05) 0%, transparent 60%);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, transparent 60%);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     pointer-events: none;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    border-color: rgba(99,102,241,0.2);
-    box-shadow: var(--shadow-lg), 0 0 40px rgba(99,102,241,0.06);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+    border-color: rgba(99, 102, 241, 0.2);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(99, 102, 241, 0.06);
 }
 
 .card:hover::before {
@@ -265,19 +351,28 @@ img {
 .tag {
     display: inline-block;
     padding: 4px 12px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     background: var(--accent-subtle);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     border-radius: var(--radius-full);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     font-size: 0.78rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 600;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     letter-spacing: 0.3px;
-    border: 1px solid rgba(99,102,241,0.12);
+    border: 1px solid rgba(99, 102, 241, 0.12);
     transition: all var(--transition-fast);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
 .tag:hover {
-    background: rgba(99,102,241,0.15);
-    border-color: rgba(99,102,241,0.3);
+    background: rgba(99, 102, 241, 0.15);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
+    border-color: rgba(99, 102, 241, 0.3);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
 }
 
 
@@ -288,48 +383,69 @@ img {
     position: fixed;
     top: 0;
     width: 100%;
+    /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
     z-index: 1000;
-    background: rgba(11,15,25,0.7);
+    /* Livello di profondità (z-index). Elementi con valore più alto stanno 'sopra' gli altri */
+    background: rgba(11, 15, 25, 0.7);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     backdrop-filter: blur(16px) saturate(1.4);
     -webkit-backdrop-filter: blur(16px) saturate(1.4);
     border-bottom: 1px solid var(--border);
     transition: all var(--transition-base);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
 .navbar--scrolled {
-    background: rgba(11,15,25,0.92);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    background: rgba(11, 15, 25, 0.92);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     justify-content: space-between;
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
     height: 72px;
 }
 
 .logo {
     font-size: 1.3rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 800;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     letter-spacing: -0.5px;
     transition: color var(--transition-fast);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
-.logo:hover { color: var(--accent-light); }
+.logo:hover {
+    color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
+}
 
 .nav-list {
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     gap: 32px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
 }
 
 .nav-link {
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-weight: 500;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     font-size: 0.9rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     position: relative;
     padding: 4px 0;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
 }
 
 .nav-link::after {
@@ -340,15 +456,34 @@ img {
     width: 0;
     height: 2px;
     background: var(--accent);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border-radius: 1px;
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     transition: width var(--transition-fast);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
-.nav-link:hover { color: var(--text-primary); }
-.nav-link:hover::after { width: 100%; }
+.nav-link:hover {
+    color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
+}
 
-.nav-link--active { color: var(--accent-light); }
-.nav-link--active::after { width: 100%; background: var(--accent-light); }
+.nav-link:hover::after {
+    width: 100%;
+    /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
+}
+
+.nav-link--active {
+    color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
+}
+
+.nav-link--active::after {
+    width: 100%;
+    /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
+    background: var(--accent-light);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
+}
 
 
 /* ── Hamburger ── */
@@ -357,8 +492,11 @@ img {
     cursor: pointer;
     border: none;
     background: transparent;
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     padding: 6px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     z-index: 1001;
+    /* Livello di profondità (z-index). Elementi con valore più alto stanno 'sopra' gli altri */
 }
 
 .hamburger .bar {
@@ -367,13 +505,27 @@ img {
     height: 2px;
     margin: 5px 0;
     background: var(--text-primary);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border-radius: 2px;
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     transition: all 0.3s ease;
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
-.hamburger.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.active .bar:nth-child(2) { opacity: 0; }
-.hamburger.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+    /* Rende l'elemento completamente trasparente (invisibile). Cambia a 1 per mostrarlo */
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+}
 
 
 /* ===========================================================
@@ -383,7 +535,9 @@ img {
     min-height: 100vh;
     min-height: 100dvh;
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
     padding-top: 72px;
     position: relative;
     overflow: hidden;
@@ -394,6 +548,7 @@ img {
     position: absolute;
     inset: 0;
     background: var(--gradient-hero);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     pointer-events: none;
 }
 
@@ -415,20 +570,30 @@ img {
 .hero-content {
     position: relative;
     z-index: 1;
+    /* Livello di profondità (z-index). Elementi con valore più alto stanno 'sopra' gli altri */
     max-width: 780px;
+    /* Larghezza massima consentita. Aumenta per rendere il box più largo */
 }
 
 .hero-badge {
     display: inline-flex;
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
     gap: 8px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
     background: var(--accent-subtle);
-    border: 1px solid rgba(99,102,241,0.15);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
+    border: 1px solid rgba(99, 102, 241, 0.15);
     padding: 8px 16px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     border-radius: var(--radius-full);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     font-size: 0.85rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 600;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 28px;
     animation: fadeInUp 0.6s var(--ease-out) 0.2s both;
 }
@@ -437,14 +602,19 @@ img {
     width: 8px;
     height: 8px;
     background: var(--success);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border-radius: 50%;
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     animation: pulse 2s infinite;
 }
 
 .hero-title {
     font-size: clamp(2.8rem, 7vw, 4.5rem);
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 800;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     line-height: 1.08;
     margin-bottom: 20px;
     letter-spacing: -2px;
@@ -453,43 +623,69 @@ img {
 
 .hero-title .gradient-text {
     background: var(--gradient-accent);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
 }
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    /* Dimensione del testo. Puoi usare rem, px o em */
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 16px;
     font-weight: 500;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     animation: fadeInUp 0.6s var(--ease-out) 0.4s both;
 }
 
 .hero-tagline {
     font-size: 1.05rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     color: var(--text-muted);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 40px;
     max-width: 550px;
+    /* Larghezza massima consentita. Aumenta per rendere il box più largo */
     line-height: 1.7;
     animation: fadeInUp 0.6s var(--ease-out) 0.5s both;
 }
 
 .hero-cta {
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     gap: 14px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
     flex-wrap: wrap;
+    /* Permette agli elementi di andare a capo se non c'è abbastanza spazio orizzontale */
     animation: fadeInUp 0.6s var(--ease-out) 0.6s both;
 }
 
-
 /* ===========================================================
-   PROGETTI — Griglia di Card
+   PROGETTI, FORMAZIONE E CONTATTI — GRIGLIE (Refactor con CSS Grid)
    =========================================================== */
-.projects-grid {
+.projects-grid,
+.education-grid,
+.contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    /* Usa grid per centrare perfettamente 1, 2 o più card */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-card,
+.education-grid .card,
+.contact-card {
+    max-width: 500px;
+    width: 100%;
+    /* Grid gestirà automaticamente la larghezza di colonna, centrando tutto */
+    margin: 0 auto;
+    /* Sicurezza extra per centrare nel caso di una colonna singola */
 }
 
 .project-card {
@@ -497,79 +693,81 @@ img {
     flex-direction: column;
 }
 
-.project-card__header {
-    margin-bottom: 16px;
+/* ===========================================================
+   CONTATTI — REFACTOR ASSOLUTO (Blocca il layout in colonna e le dimensioni)
+   =========================================================== */
+.contact-grid {
+    max-width: 900px;
 }
 
-.project-card__icon {
-    width: 44px;
-    height: 44px;
-    background: var(--accent-subtle);
-    border: 1px solid rgba(99,102,241,0.12);
-    border-radius: var(--radius-sm);
-    display: flex;
+.contact-card {
+    display: flex !important;
+    flex-direction: column !important;
     align-items: center;
     justify-content: center;
-    color: var(--accent-light);
-    font-size: 1.3rem;
-    margin-bottom: 16px;
-    transition: all var(--transition-fast);
+    text-align: center;
+    text-decoration: none;
+    padding: 30px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    box-sizing: border-box;
+    /* Rimuoviamo le vecchie larghezze forzate che creavano problemi, Grid gestirà tutto */
 }
 
-.project-card:hover .project-card__icon {
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
+}
+
+/* DISTRUGGE OGNI RESIDUO DI RIGA ORIZZONTALE */
+.contact-card .project-card__header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 12px;
+    width: 100% !important;
+}
+
+/* BLOCCA L'ICONA COME QUADRATO PERFETTO (Niente barre alte) */
+.contact-card .project-card__icon {
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
+    /* Impedisce fisicamente di allungarsi in altezza */
+    background: var(--accent-subtle);
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: var(--radius-sm);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--accent-light);
+    font-size: 1.3rem !important;
+    margin-bottom: 12px;
+    transition: all var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.contact-card:hover .project-card__icon {
     background: var(--accent);
     color: #fff;
-    box-shadow: 0 0 20px var(--accent-glow);
 }
 
-.project-card__title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 8px;
-    letter-spacing: -0.3px;
-}
-
-.project-card__desc {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    flex: 1;
-    margin-bottom: 20px;
-}
-
-.project-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.project-card__links {
-    display: flex;
-    gap: 12px;
-    margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-}
-
-.project-card__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.85rem;
+.contact-card .project-card__title {
+    font-size: 1.05rem;
     font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.contact-card .project-card__desc {
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    transition: color var(--transition-fast);
-}
-
-.project-card__link:hover {
-    color: var(--accent-light);
-}
-
-.project-card__link svg {
-    width: 16px;
-    height: 16px;
+    margin: 0;
+    word-break: break-all;
 }
 
 
@@ -579,7 +777,9 @@ img {
 .timeline {
     position: relative;
     max-width: 800px;
+    /* Larghezza massima consentita. Aumenta per rendere il box più largo */
     margin: 0 auto;
+    /* Centra orizzontalmente l'elemento blocco rispetto alla pagina */
     padding-left: 40px;
 }
 
@@ -590,17 +790,22 @@ img {
     top: 8px;
     bottom: 8px;
     width: 2px;
-    background: linear-gradient(to bottom, var(--accent), rgba(99,102,241,0.15));
+    background: linear-gradient(to bottom, var(--accent), rgba(99, 102, 241, 0.15));
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border-radius: 2px;
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
 }
 
 .timeline-item {
     position: relative;
     margin-bottom: 40px;
     padding: 28px 32px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
 }
 
-.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
 
 /* Dot sulla timeline */
 .timeline-item::before {
@@ -611,43 +816,61 @@ img {
     width: 14px;
     height: 14px;
     border-radius: 50%;
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     background: var(--bg-card);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border: 3px solid var(--accent);
     box-shadow: 0 0 0 4px var(--bg-primary), 0 0 12px var(--accent-glow);
     transition: all var(--transition-fast);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
     z-index: 1;
+    /* Livello di profondità (z-index). Elementi con valore più alto stanno 'sopra' gli altri */
 }
 
 .timeline-item:hover::before {
     background: var(--accent);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     box-shadow: 0 0 0 4px var(--bg-primary), 0 0 20px var(--accent-glow);
 }
 
 .timeline-date {
     display: inline-block;
     padding: 4px 14px;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
     background: var(--accent-subtle);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     border-radius: var(--radius-full);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     font-size: 0.8rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     margin-bottom: 14px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
 }
 
 .timeline-role {
     font-size: 1.35rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 4px;
     letter-spacing: -0.3px;
 }
 
 .timeline-company {
     font-size: 1.05rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-weight: 600;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     margin-bottom: 16px;
 }
 
@@ -660,7 +883,9 @@ img {
     padding-left: 24px;
     margin-bottom: 8px;
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-size: 0.95rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     line-height: 1.6;
 }
 
@@ -669,7 +894,9 @@ img {
     position: absolute;
     left: 0;
     color: var(--accent);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-size: 1rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
 }
 
 
@@ -680,28 +907,39 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 24px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
 }
 
 .volunteer-card__role {
     font-size: 1.15rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 4px;
 }
 
 .volunteer-card__org {
     font-size: 0.95rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-weight: 600;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     margin-bottom: 6px;
 }
 
 .volunteer-card__period {
     font-size: 0.8rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     color: var(--text-muted);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 16px;
     font-weight: 500;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     text-transform: uppercase;
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     letter-spacing: 0.5px;
 }
 
@@ -711,85 +949,108 @@ img {
 
 .volunteer-card__impact-title {
     font-size: 0.78rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     text-transform: uppercase;
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     letter-spacing: 1px;
     color: var(--success);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 8px;
 }
 
 .volunteer-card__impact p {
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-size: 0.92rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     line-height: 1.6;
 }
 
 .volunteer-card__skills-title {
     font-size: 0.78rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     text-transform: uppercase;
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     letter-spacing: 1px;
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 10px;
 }
 
 .volunteer-card__skills {
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     flex-wrap: wrap;
+    /* Permette agli elementi di andare a capo se non c'è abbastanza spazio orizzontale */
     gap: 8px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
 }
 
 .volunteer-card__skill-tag {
     display: inline-block;
     padding: 3px 10px;
-    background: rgba(34,197,94,0.08);
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
+    background: rgba(34, 197, 94, 0.08);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     color: var(--success);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     border-radius: var(--radius-full);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     font-size: 0.75rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 600;
-    border: 1px solid rgba(34,197,94,0.15);
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
+    border: 1px solid rgba(34, 197, 94, 0.15);
 }
 
 
 /* ===========================================================
-   FORMAZIONE — Compatta
+   FORMAZIONE — Compatta (Già centrata dalla griglia comune sopra)
    =========================================================== */
-.education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .edu-card__year {
     display: inline-block;
     font-size: 0.8rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--text-muted);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 12px;
     text-transform: uppercase;
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     letter-spacing: 0.5px;
 }
 
 .edu-card__degree {
     font-size: 1.2rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     font-weight: 700;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     color: var(--text-primary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     margin-bottom: 6px;
     letter-spacing: -0.3px;
 }
 
 .edu-card__school {
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-weight: 600;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     margin-bottom: 14px;
     font-size: 0.95rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
 }
 
 .edu-card__details {
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-size: 0.92rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
     line-height: 1.6;
 }
 
@@ -799,40 +1060,59 @@ img {
    =========================================================== */
 .footer {
     background: var(--bg-secondary);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border-top: 1px solid var(--border);
     padding: 48px 0;
+    /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
 }
 
 .footer-inner {
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     flex-direction: column;
+    /* Dispone gli elementi in verticale, uno sotto l'altro. Rimuovi o cambia in 'row' per affiancarli */
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
     gap: 28px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
 }
 
 .footer-social {
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     gap: 20px;
+    /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
 }
 
 .footer-social__link {
     width: 44px;
     height: 44px;
     border-radius: var(--radius-sm);
+    /* Arrotonda gli angoli del box. Aumenta i pixel per angoli più rotondi */
     background: var(--bg-card);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     border: 1px solid var(--border);
     display: flex;
+    /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
     align-items: center;
+    /* Allinea gli elementi al centro verticalmente (o trasversalmente) */
     justify-content: center;
+    /* Centra gli elementi orizzontalmente all'interno del contenitore */
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     transition: all var(--transition-fast);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
 .footer-social__link:hover {
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     border-color: var(--accent);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     background: var(--accent-subtle);
+    /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
     transform: translateY(-2px);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
 }
 
 .footer-social__link svg {
@@ -842,17 +1122,23 @@ img {
 
 .footer-copy {
     color: var(--text-muted);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-size: 0.85rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
 }
 
 .footer-email {
     color: var(--text-secondary);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     font-weight: 500;
+    /* Spessore del carattere (es. 400 normale, 700 grassetto) */
     font-size: 0.9rem;
+    /* Dimensione del testo. Puoi usare rem, px o em */
 }
 
 .footer-email:hover {
     color: var(--accent-light);
+    /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
 }
 
 
@@ -863,55 +1149,104 @@ img {
 /* Fade-in su scroll */
 .reveal {
     opacity: 0;
+    /* Rende l'elemento completamente trasparente (invisibile). Cambia a 1 per mostrarlo */
     transform: translateY(28px);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
 }
 
 /* Staggered cards */
 .reveal-stagger .card {
     opacity: 0;
+    /* Rende l'elemento completamente trasparente (invisibile). Cambia a 1 per mostrarlo */
     transform: translateY(20px);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+    /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
 }
 
 .reveal-stagger.visible .card {
     opacity: 1;
     transform: translateY(0);
+    /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
 }
 
-.reveal-stagger.visible .card:nth-child(1) { transition-delay: 0.05s; }
-.reveal-stagger.visible .card:nth-child(2) { transition-delay: 0.12s; }
-.reveal-stagger.visible .card:nth-child(3) { transition-delay: 0.19s; }
-.reveal-stagger.visible .card:nth-child(4) { transition-delay: 0.26s; }
-.reveal-stagger.visible .card:nth-child(5) { transition-delay: 0.33s; }
-.reveal-stagger.visible .card:nth-child(6) { transition-delay: 0.40s; }
+.reveal-stagger.visible .card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.reveal-stagger.visible .card:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.reveal-stagger.visible .card:nth-child(3) {
+    transition-delay: 0.19s;
+}
+
+.reveal-stagger.visible .card:nth-child(4) {
+    transition-delay: 0.26s;
+}
+
+.reveal-stagger.visible .card:nth-child(5) {
+    transition-delay: 0.33s;
+}
+
+.reveal-stagger.visible .card:nth-child(6) {
+    transition-delay: 0.40s;
+}
 
 /* Hero animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
+        /* Rende l'elemento completamente trasparente (invisibile). Cambia a 1 per mostrarlo */
         transform: translateY(24px);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
     }
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.4); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.4);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+    }
 }
 
 /* Floating accent orb (decorative) */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-16px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+    }
+
+    50% {
+        transform: translateY(-16px);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+    }
 }
 
 
@@ -921,42 +1256,63 @@ img {
 
 /* ── Tablet & below (≤ 768px) ── */
 @media (max-width: 768px) {
-    .section { padding: 80px 0; }
+    .section {
+        padding: 80px 0;
+        /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
+    }
 
     /* Nav mobile */
-    .hamburger { display: block; }
+    .hamburger {
+        display: block;
+    }
 
     .nav-menu {
         position: fixed;
         top: 72px;
         left: 0;
         width: 100%;
+        /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
         height: calc(100vh - 72px);
         height: calc(100dvh - 72px);
-        background: rgba(11,15,25,0.97);
+        background: rgba(11, 15, 25, 0.97);
+        /* Colore o sfumatura di sfondo dell'elemento. Puoi usare colori esadecimali (es. #ff0000) o variabili var(--nome) */
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         display: flex;
+        /* Attiva il layout flessibile (elementi affiancati/allineati). Cambia in 'grid' o 'block' se necessario */
         align-items: flex-start;
         justify-content: center;
+        /* Centra gli elementi orizzontalmente all'interno del contenitore */
         padding-top: 60px;
         transform: translateX(-100%);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
         transition: transform 0.35s var(--ease-out);
+        /* Rende fluide le animazioni (es. quando passi sopra col mouse). Modifica i secondi (es. 0.3s) per la velocità */
     }
 
-    .nav-menu.active { transform: translateX(0); }
+    .nav-menu.active {
+        transform: translateX(0);
+        /* Sposta, ruota o scala l'elemento. Es. translateY sposta in alto/basso */
+    }
 
     .nav-list {
         flex-direction: column;
+        /* Dispone gli elementi in verticale, uno sotto l'altro. Rimuovi o cambia in 'row' per affiancarli */
         gap: 0;
+        /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
         text-align: center;
+        /* Centra il testo all'interno del suo contenitore */
     }
 
-    .nav-list li { margin: 16px 0; }
+    .nav-list li {
+        margin: 16px 0;
+    }
 
     .nav-link {
         font-size: 1.15rem;
+        /* Dimensione del testo. Puoi usare rem, px o em */
         color: var(--text-primary);
+        /* Colore del testo. Sostituisci con var(--colore) o un hex (#fff) */
     }
 
     .btn--download {
@@ -964,50 +1320,131 @@ img {
     }
 
     /* Hero mobile */
-    .hero-title { letter-spacing: -1px; }
+    .hero-title {
+        letter-spacing: -1px;
+    }
+
     .hero-cta {
         flex-direction: column;
+        /* Dispone gli elementi in verticale, uno sotto l'altro. Rimuovi o cambia in 'row' per affiancarli */
         width: 100%;
+        /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
     }
-    .hero-cta .btn { width: 100%; }
 
-    /* Projects grid */
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .hero-cta .btn {
+        width: 100%;
+        /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
+    }
+
+    /* ✅ Projects grid (Corretto: la griglia CSS gestisce già il mobile in automatico) */
+    .project-card {
+        max-width: 100%;
+        /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
     }
 
     /* Timeline mobile */
-    .timeline { padding-left: 32px; }
-    .timeline::before { left: 5px; }
-    .timeline-item { padding: 22px 20px; }
-    .timeline-item::before { left: -31px; width: 12px; height: 12px; }
+    .timeline {
+        padding-left: 32px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-item {
+        padding: 22px 20px;
+        /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
+    }
+
+    .timeline-item::before {
+        left: -31px;
+        width: 12px;
+        height: 12px;
+    }
 
     /* Volunteer grid */
-    .volunteer-grid { grid-template-columns: 1fr; }
+    .volunteer-grid {
+        grid-template-columns: 1fr;
+    }
 
-    /* Education */
-    .education-grid { grid-template-columns: 1fr; }
+    /* ✅ Education (Corretto: la griglia CSS gestisce già il mobile in automatico) */
+    .education-grid .card {
+        max-width: 100%;
+        /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
+        width: 100%;
+        /* Occupa tutto lo spazio orizzontale disponibile nel genitore */
+    }
+
+    /* Contacts */
+    .contact-card {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* ── Small phones (≤ 480px) ── */
 @media (max-width: 480px) {
-    .container { padding: 0 16px; }
-    .section { padding: 64px 0; }
+    .container {
+        padding: 0 16px;
+        /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
+    }
 
-    .hero { padding-top: 64px; }
-    .hero-title { font-size: 2.2rem; letter-spacing: -0.5px; }
-    .hero-subtitle { font-size: 1rem; }
-    .hero-tagline { font-size: 0.95rem; }
+    .section {
+        padding: 64px 0;
+        /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
+    }
 
-    .section-title { font-size: 1.8rem; }
+    .hero {
+        padding-top: 64px;
+    }
 
-    .card { padding: 24px; }
+    .hero-title {
+        font-size: 2.2rem;
+        /* Dimensione del testo. Puoi usare rem, px o em */
+        letter-spacing: -0.5px;
+    }
 
-    .timeline { padding-left: 28px; }
-    .timeline-item { padding: 18px 16px; }
-    .timeline-item::before { left: -27px; top: 24px; width: 10px; height: 10px; }
+    .hero-subtitle {
+        font-size: 1rem;
+        /* Dimensione del testo. Puoi usare rem, px o em */
+    }
 
-    .projects-grid { gap: 16px; }
+    .hero-tagline {
+        font-size: 0.95rem;
+        /* Dimensione del testo. Puoi usare rem, px o em */
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        /* Dimensione del testo. Puoi usare rem, px o em */
+    }
+
+    .card {
+        padding: 24px;
+        /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
+    }
+
+    .timeline {
+        padding-left: 28px;
+    }
+
+    .timeline-item {
+        padding: 18px 16px;
+        /* Spazio interno all'elemento (tra il bordo e il contenuto). Modifica per ingrandire/ridurre l'area cliccabile */
+    }
+
+    .timeline-item::before {
+        left: -27px;
+        top: 24px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .projects-grid {
+        gap: 16px;
+        /* Spazio vuoto tra gli elementi (sia orizzontale che verticale). Aumenta il valore per distanziarli di più */
+    }
 }
 
 /* ── Large screens (≥ 1024px) ── */
@@ -1016,4 +1453,22 @@ img {
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+/* ===========================================================
+   SISTEMAZIONE ICONE SVG (Icona accanto al testo + Dimensioni fisse)
+   =========================================================== */
+.project-card__link svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0;
+    display: inline-block;
+    /* FONDAMENTALE: permette all'icona di stare sulla stessa riga del testo */
+    vertical-align: middle;
+}
+
+/* Pulsante Scarica CV */
+.btn--download svg {
+    width: 16px !important;
+    height: 16px !important;
 }

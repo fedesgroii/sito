@@ -52,6 +52,7 @@
                     <!-- Elemento della lista per il pulsante del Curriculum Vitae -->
                     <li>
                         <!-- Pulsante per scaricare il CV con icona integrata -->
+                        <!-- SUGGERIMENTO: Inserisci qui il percorso corretto del tuo CV, ad esempio: href="assets/cv.pdf" -->
                         <a href="#" class="btn btn--download" id="downloadCV" download>
                             <!-- Icona SVG che rappresenta la freccia di download -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -144,6 +145,17 @@
                     Contattami su LinkedIn
                     <!-- Chiusura del tag a del pulsante secondario -->
                 </a>
+                <!-- Pulsante Scarica CV aggiornato con placeholder logico -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--secondary"
+                    style="color: var(--text-primary); border-color: var(--border);">
+                    <!-- SUGGERIMENTO: Inserisci qui il percorso del CV, es: href="assets/cv.pdf" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    Scarica CV
+                </a>
                 <!-- Chiusura del div dei pulsanti di CTA -->
             </div>
             <!-- Chiusura del contenitore centrale della Hero -->
@@ -218,20 +230,18 @@
                             GitHub
                             <!-- Chiusura del link GitHub -->
                         </a>
-                        <!-- Link segnaposto alla Live Demo -->
+                        <!-- Link segnaposto alla Live Demo commentato per essere aggiornato in futuro -->
+                        <!-- 
                         <a href="https://live-demo.example.com" target="_blank" rel="noopener noreferrer"
                             class="project-card__link">
-                            <!-- Icona SVG con freccia esterna per demo live -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor">
-                                <!-- Tracciato freccia in alto a destra per link esterno -->
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                <!-- Fine icona demo live -->
                             </svg>
                             Demo Live
-                            <!-- Chiusura del link della demo -->
-                        </a>
+                        </a> 
+                        -->
                         <!-- Chiusura del contenitore link -->
                     </div>
                     <!-- Chiusura della prima card progetto -->
@@ -283,20 +293,18 @@
                             GitHub
                             <!-- Chiusura del link GitHub -->
                         </a>
-                        <!-- Link segnaposto alla Live Demo -->
+                        <!-- Link segnaposto alla Live Demo commentato per essere aggiornato in futuro -->
+                        <!-- 
                         <a href="https://live-demo.example.com" target="_blank" rel="noopener noreferrer"
                             class="project-card__link">
-                            <!-- Icona SVG della demo live -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor">
-                                <!-- Disegno freccia esterna -->
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                <!-- Fine icona demo live -->
                             </svg>
                             Demo Live
-                            <!-- Chiusura del link della demo -->
-                        </a>
+                        </a> 
+                        -->
                         <!-- Chiusura del contenitore link -->
                     </div>
                     <!-- Chiusura della seconda card progetto -->
@@ -320,126 +328,87 @@
                 <!-- Chiusura dell'header -->
             </div>
 
-            <!-- Griglia di formazione che contiene la card di laurea -->
+            <!-- Griglia di formazione che contiene le card di istruzione -->
             <div class="education-grid reveal-stagger">
-                <!-- Card principale dei dettagli universitari -->
+                <!-- Card 1: Laurea Triennale -->
                 <div class="card">
-                    <!-- Periodo accademico -->
-                    <span class="edu-card__year">2022 — in corso (mancano 2 esami)</span>
-                    <!-- Titolo accademico in corso -->
+                    <!-- Intestazione -->
+                    <span class="edu-card__year">🎓 2022 – in corso (mancano 2 esami)</span>
                     <h3 class="edu-card__degree">Laurea Triennale in Ingegneria Informatica</h3>
-                    <!-- Nome dell'università statale -->
-                    <h4 class="edu-card__school">Università degli Studi di Roma <br> "Tor Vergata"</h4>
-                    <!-- Dettagli sulla tesi di laurea -->
+                    <h4 class="edu-card__school">Università degli Studi di Roma "Tor Vergata"</h4>
                     <p class="edu-card__details" style="margin-bottom: 1.5rem;">Tesi: non ancora assegnata</p>
-                    <!-- Contenitore interno con bordo per mostrare i corsi più rilevanti sostenuti -->
+
+                    <!-- Corsi Rilevanti -->
                     <div style="border-top: 1px solid var(--border); margin: 1.5rem 0; padding-top: 1.5rem;">
-                        <!-- Titolo dell'elenco dei corsi rilevanti -->
                         <h4 style="font-size: 1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600;">
                             Corsi Rilevanti:</h4>
-                        <!-- Lista contenente i singoli corsi formativi -->
                         <ul
                             style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-                            <!-- Corso di Basi di dati -->
                             <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                                <!-- Nome del corso in grassetto -->
                                 <strong style="color: var(--text-primary);">• Basi di Dati:</strong> Progettazione DB
                                 relazionali, ottimizzazione query, procedure store.
-                                <!-- Fine del list item del corso -->
                             </li>
-                            <!-- Corso di ISPW -->
                             <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                                <!-- Nome del corso in grassetto -->
                                 <strong style="color: var(--text-primary);">• Ingegneria del Software e Progettazione
                                     Web (ISPW):</strong> Pattern architetturali, MVC, BCE, UML.
-                                <!-- Fine del list item del corso -->
                             </li>
-                            <!-- Corso di Sistemi Operativi -->
                             <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                                <!-- Nome del corso in grassetto -->
                                 <strong style="color: var(--text-primary);">• Sistemi Operativi:</strong> Processi,
                                 thread, semafori, programmazione concorrente.
-                                <!-- Fine del list item del corso -->
                             </li>
-                            <!-- Corso di Ingegneria dell'Internet e Web -->
                             <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                                <!-- Nome del corso in grassetto -->
                                 <strong style="color: var(--text-primary);">• Ingegneria dell'Internet e Web
                                     (IIW):</strong> Crittografia, SSL/TLS, HTTPS, REST/SOAP, DNS, CDN, certificati
                                 digitali.
-                                <!-- Fine del list item del corso -->
                             </li>
                             <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                                <!-- Nome del corso in grassetto -->
                                 <strong style="color: var(--text-primary);">• Calcolatori Elettronici:</strong>
-                                Architettura dei calcolatori, Gestione delle risorse hardware e software, Linguaggio
-                                Assembly.
-                                <!-- Fine del list item del corso -->
+                                Architettura dei calcolatori, Gestione risorse hardware e software, Linguaggio Assembly.
                             </li>
-                            <!-- Chiusura della lista dei corsi -->
                         </ul>
-                        <!-- Chiusura del blocco dei corsi rilevanti -->
                     </div>
-                    <!-- Chiusura della card di istruzione -->
                 </div>
-                <!-- Chiusura del contenitore griglia formazione -->
-            </div>
-            <!-- Chiusura del container della sezione -->
 
+                <!-- Card 2: Diploma -->
+                <div class="card">
+                    <!-- Intestazione -->
+                    <span class="edu-card__year">🏫 2017 – 2022</span>
+                    <h3 class="edu-card__degree">Diploma di Perito Informatico e Telecomunicazioni</h3>
+                    <h4 class="edu-card__school">I.I.S. Di Vittorio - Lattanzio</h4>
 
-
-
-
-
-            <div class="card">
-                <!-- Periodo accademico -->
-                <span class="edu-card__year">2017 — 2022</span>
-                <!-- Titolo accademico in corso -->
-                <h3 class="edu-card__degree">Diploma di Perito Informatico e Telecomunicazioni</h3>
-                <!-- Nome dell'università statale -->
-                <h4 class="edu-card__school">I.I.S. Di Vittorio - Lattanzio</h4>
-
-                <!-- Contenitore interno con bordo per mostrare i corsi più rilevanti sostenuti -->
-                <div style="border-top: 1px solid var(--border); margin: 1.5rem 0; padding-top: 1.5rem;">
-                    <!-- Titolo dell'elenco dei corsi rilevanti -->
-                    <h4 style="font-size: 1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600;">
-                        Materie Rilevanti:</h4>
-                    <!-- Lista contenente i singoli corsi formativi -->
-                    <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-                        <!-- Corso di Basi di dati -->
-                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                            <!-- Nome del corso in grassetto -->
-                            <strong style="color: var(--text-primary);">• Informatica:</strong> Programmazione java
-                            (base), PHP (intermedio), basi di dati (avanzato)
-                            <!-- Fine del list item del corso -->
-                        </li>
-                        <!-- Corso di ISPW -->
-                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                            <!-- Nome del corso in grassetto -->
-                            <strong style="color: var(--text-primary);">• Ingegneria del Software e Progettazione
-                                Web (ISPW):</strong> Pattern architetturali, MVC, BCE, UML.
-                            <!-- Fine del list item del corso -->
-                        </li>
-                        <!-- Corso di Sistemi Operativi -->
-                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                            <!-- Nome del corso in grassetto -->
-                            <strong style="color: var(--text-primary);">• Sistemi Operativi:</strong> Processi,
-                            thread, semafori, programmazione concorrente.
-                            <!-- Fine del list item del corso -->
-                        </li>
-                        <!-- Corso di Ingegneria dell'Internet e Web -->
-                        <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
-                            <!-- Nome del corso in grassetto -->
-                            <strong style="color: var(--text-primary);">• Ingegneria dell'Internet e Web
-                                (IIW):</strong> Crittografia, SSL/TLS, HTTPS, REST/SOAP, DNS, CDN, certificati
-                            digitali.
-                            <!-- Fine del list item del corso -->
-                        </li>
-                        <!-- Chiusura della lista dei corsi -->
-                    </ul>
-                    <!-- Chiusura del blocco dei corsi rilevanti -->
+                    <!-- Materie Rilevanti -->
+                    <div style="border-top: 1px solid var(--border); margin: 1.5rem 0; padding-top: 1.5rem;">
+                        <h4 style="font-size: 1rem; color: var(--accent-light); margin-bottom: 1rem; font-weight: 600;">
+                            Materie Rilevanti:</h4>
+                        <ul
+                            style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <strong style="color: var(--text-primary);">• Reti di calcolatori:</strong> Protocolli
+                                TCP/IP, subnetting, routing.
+                            </li>
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <strong style="color: var(--text-primary);">• Sistemi e reti:</strong> Configurazione
+                                server, amministrazione di rete.
+                            </li>
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <strong style="color: var(--text-primary);">• Telecomunicazioni:</strong> Modulazione,
+                                trasmissione dati, fibra ottica.
+                            </li>
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <strong style="color: var(--text-primary);">• Elettronica:</strong> Circuiti,
+                                componenti, basi di elettrotecnica.
+                            </li>
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <strong style="color: var(--text-primary);">• Tecnologie informatiche:</strong> HTML,
+                                CSS, PHP, database (MySQL).
+                            </li>
+                            <li style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                                <strong style="color: var(--text-primary);">• Programmazione Java:</strong> Basi di OOP,
+                                strutture dati.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Chiusura della card di istruzione -->
             </div>
 
 
@@ -483,7 +452,8 @@
                     <!-- Contenuto testuale dei linguaggi di programmazione -->
                     <p class="project-card__desc"
                         style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 12px; font-weight: 500;">
-                        Java, SQL, JavaScript (basi)
+                        Java, SQL, C (avanzato), Python (base), PHP (base), JavaScript (base), HTML & CSS (base),
+                        Jython, Assembly
                         <!-- Chiusura del paragrafo linguaggi -->
                     </p>
                     <!-- Chiusura card linguaggi -->
@@ -552,66 +522,35 @@
                 <!-- Chiusura header contatti -->
             </div>
             <!-- Griglia per disporre le card dei contatti, centrata con larghezza massima -->
-            <div class="projects-grid reveal-stagger" style="max-width:700px; margin: 0 auto;">
-                <!-- Card Email: attiva il client email predefinito dell'utente -->
-                <a href="mailto:sgroi.federico@gmail.com" class="card project-card" style="text-decoration:none;">
-                    <!-- Intestazione della card email -->
+            <div class="contact-grid reveal-stagger">
+                <!-- Card Email (aggiornata) -->
+                <a href="mailto:sgroi.federico@gmail.com" class="card contact-card">
                     <div class="project-card__header">
-                        <!-- Icona busta email -->
                         <div class="project-card__icon">✉️</div>
-                        <!-- Titolo del contatto -->
                         <h3 class="project-card__title">Email</h3>
-                        <!-- Chiusura header email -->
                     </div>
-                    <!-- Indirizzo email in chiaro per favorire il copia e incolla -->
                     <p class="project-card__desc">sgroi.federico@gmail.com</p>
-                    <!-- Chiusura card email -->
                 </a>
-                <!-- Card LinkedIn: reindirizza al profilo LinkedIn personale dell'utente -->
+
+                <!-- Card LinkedIn (aggiornata) -->
                 <a href="https://www.linkedin.com/in/federico-sgroi-5bb560234?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-                    target="_blank" rel="noopener noreferrer" class="card project-card" style="text-decoration:none;">
-                    <!-- Intestazione della card LinkedIn -->
+                    target="_blank" rel="noopener noreferrer" class="card contact-card">
                     <div class="project-card__header">
-                        <!-- Icona cartella/professione per LinkedIn -->
                         <div class="project-card__icon">💼</div>
-                        <!-- Titolo LinkedIn -->
                         <h3 class="project-card__title">LinkedIn</h3>
-                        <!-- Chiusura header LinkedIn -->
                     </div>
-                    <!-- Testo abbreviato dell'URL di LinkedIn -->
                     <p class="project-card__desc">linkedin.com/in/federico-sgroi</p>
-                    <!-- Chiusura card LinkedIn -->
                 </a>
-                <!-- Card GitHub: apre il profilo di hosting dei progetti -->
+
+                <!-- Card GitHub -->
                 <a href="https://github.com/fedesgroii" target="_blank" rel="noopener noreferrer"
-                    class="card project-card" style="text-decoration:none;">
-                    <!-- Intestazione della card GitHub -->
+                    class="card contact-card">
                     <div class="project-card__header">
-                        <!-- Icona di un collegamento ipertestuale per GitHub -->
                         <div class="project-card__icon">🔗</div>
-                        <!-- Titolo GitHub -->
                         <h3 class="project-card__title">GitHub</h3>
-                        <!-- Chiusura header GitHub -->
                     </div>
-                    <!-- Indirizzo testuale del profilo GitHub personale -->
                     <p class="project-card__desc">github.com/fedesgroii</p>
-                    <!-- Chiusura card GitHub -->
                 </a>
-                <!-- Card Telefono: avvia la chiamata telefonica diretta sui dispositivi compatibili -->
-                <a href="tel:+393278177551" class="card project-card" style="text-decoration:none;">
-                    <!-- Intestazione della card telefono -->
-                    <div class="project-card__header">
-                        <!-- Icona di uno smartphone -->
-                        <div class="project-card__icon">📱</div>
-                        <!-- Titolo Telefono -->
-                        <h3 class="project-card__title">Telefono</h3>
-                        <!-- Chiusura header telefono -->
-                    </div>
-                    <!-- Numero di telefono visualizzabile -->
-                    <p class="project-card__desc">+39 327 81 77 551</p>
-                    <!-- Chiusura card telefono -->
-                </a>
-                <!-- Chiusura griglia contatti -->
             </div>
             <!-- Chiusura container contatti -->
         </div>
